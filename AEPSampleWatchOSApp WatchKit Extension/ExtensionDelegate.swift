@@ -36,13 +36,6 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     }
   }
     
-    func application(_ application: WKInterfaceDevice, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-           // sometimes this function didFailToRegisterForRemoteNotificationsWithError is not called
-           
-                    print(error.localizedDescription)
-          
-       }
-    
     func didFailToRegisterForRemoteNotificationsWithError(_ error: Error) {
         print("Failed to Register")
         print(error)
