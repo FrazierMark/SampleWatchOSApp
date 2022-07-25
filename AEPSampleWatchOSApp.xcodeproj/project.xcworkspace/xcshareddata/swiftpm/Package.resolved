@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "aepsdk-core-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-core-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "04bc2f73bc8658070ef11a00a52a5899ff89bea4"
+      }
+    },
+    {
+      "identity" : "aepsdk-messaging-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-messaging-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "691de5d50f64a3a5367ca42c41bba95f75852031"
+      }
+    },
+    {
+      "identity" : "aepsdk-rulesengine-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-rulesengine-ios.git",
+      "state" : {
+        "revision" : "5907e2ed364135448a2a5d77a76c2ff971396397",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
