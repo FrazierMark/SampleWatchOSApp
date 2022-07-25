@@ -1,9 +1,8 @@
 {
+    "apns-push-type":"alert",
     "aps": {
         "alert": {
             "body": "Test message",
-            "title": "Optional title",
-            "subtitle": "Optional subtitle"
         },
         "category": "myCategory",
         "thread-id": "5280"

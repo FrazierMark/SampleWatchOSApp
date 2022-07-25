@@ -51,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		670B4660288F4B7E009C7D19 /* AEPSampleWatchOSApp-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AEPSampleWatchOSApp-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		670EFDA8288B6B6B008470F2 /* AEPSampleWatchOSApp WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AEPSampleWatchOSApp WatchKit App.entitlements"; sourceTree = "<group>"; };
 		671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		677EC7562888C52C008B97B1 /* AEPSampleWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPSampleWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +123,7 @@
 		677EC75E2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				670B4660288F4B7E009C7D19 /* AEPSampleWatchOSApp-WatchKit-App-Info.plist */,
 				670EFDA8288B6B6B008470F2 /* AEPSampleWatchOSApp WatchKit App.entitlements */,
 				677EC75F2888C52C008B97B1 /* Assets.xcassets */,
 			);
@@ -416,8 +418,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W25MXXD3AC;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AEPSampleWatchOSApp-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AEPSampleWatchOSApp WatchKit App";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = AEPSampleWatchOSApp_WatchKit_App.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -449,8 +452,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W25MXXD3AC;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AEPSampleWatchOSApp-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AEPSampleWatchOSApp WatchKit App";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = AEPSampleWatchOSApp_WatchKit_App.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;

@@ -29,10 +29,19 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
       if granted {
           print("Permission Granted")
+          
           WKExtension.shared().registerForRemoteNotifications()
+          print(WKExtension.shared().isRegisteredForRemoteNotifications)
       }
     }
   }
+    
+    func application(_ application: WKInterfaceDevice, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+           // sometimes this function didFailToRegisterForRemoteNotificationsWithError is not called
+           
+                    print(error.localizedDescription)
+          
+       }
     
     func didFailToRegisterForRemoteNotificationsWithError(_ error: Error) {
         print("Failed to Register")
