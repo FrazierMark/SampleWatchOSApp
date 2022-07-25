@@ -25,10 +25,14 @@ import AEPServices
 final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
         
   func applicationDidFinishLaunching() {
+    
+    print(WKExtension.shared().isRegisteredForRemoteNotifications)
+      
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
       if granted {
           print("Permission Granted")
+          
           
           WKExtension.shared().registerForRemoteNotifications()
           print(WKExtension.shared().isRegisteredForRemoteNotifications)
@@ -48,6 +52,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
         // Send push token to experience platform
         // MobileCore.setPushIdentifier(deviceToken)
     }
+    
     
     func applicationDidEnterBackground() {
         print("applicationDidEnterBackground")
