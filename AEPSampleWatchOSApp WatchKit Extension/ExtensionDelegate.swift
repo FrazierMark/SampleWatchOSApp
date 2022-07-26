@@ -9,15 +9,17 @@
 import Foundation
 import WatchKit
 import UserNotifications
-import AEPMessaging
+
 // import AEPAssurance
 import AEPCore
-//import AEPEdge
-//import AEPEdgeIdentity
+import AEPEdge
+import AEPEdgeIdentity
 import AEPMessaging
+import AEPLifecycle
+import AEPUserProfile
 import AEPSignal
 import AEPServices
-
+import AEPEdgeConsent
 
 
 
@@ -26,7 +28,15 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
         
   func applicationDidFinishLaunching() {
     
-    print(WKExtension.shared().isRegisteredForRemoteNotifications)
+      let currentAppId = "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development"
+
+      let extensions = [Edge.self, Assurance.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self]
+
+      MobileCore.setLogLevel(.trace)
+
+      MobileCore.registerExtensions(extensions, {
+          MobileCore.configureWith(appId: currentAppId)
+      })
       
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound]) { granted, _ in

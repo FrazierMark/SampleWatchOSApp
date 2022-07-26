@@ -10,6 +10,33 @@
       }
     },
     {
+      "identity" : "aepsdk-edge-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-edge-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f98238fa454ec11eece1de89a1e1252ed2101ceb"
+      }
+    },
+    {
+      "identity" : "aepsdk-edgeconsent-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-edgeconsent-ios",
+      "state" : {
+        "revision" : "42449c7c8aa262f9ac975de9415266c6f362d6d6",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "aepsdk-edgeidentity-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-edgeidentity-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c17c9e81d13ecfe5985a59453c00d34d1b636a96"
+      }
+    },
+    {
       "identity" : "aepsdk-messaging-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FrazierMark/aepsdk-messaging-ios",
@@ -25,6 +52,15 @@
       "state" : {
         "revision" : "5907e2ed364135448a2a5d77a76c2ff971396397",
         "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "aepsdk-userprofile-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrazierMark/aepsdk-userprofile-ios",
+      "state" : {
+        "revision" : "5fab4c979bf29d2086a6521969a9f8ad38d69062",
+        "version" : "3.0.1"
       }
     }
   ],
