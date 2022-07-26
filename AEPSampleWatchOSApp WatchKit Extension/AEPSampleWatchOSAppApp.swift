@@ -15,7 +15,7 @@ struct AEPSampleWatchOSAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                MenuView()
             }
         }
     }

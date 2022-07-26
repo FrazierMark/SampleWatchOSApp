@@ -29,14 +29,23 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
   func applicationDidFinishLaunching() {
     
       let currentAppId = "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development"
-
+      
       let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self]
 
       MobileCore.setLogLevel(.trace)
 
+//      MobileCore.registerExtensions(extensions, {
+//          MobileCore.configureWith(appId: currentAppId)
+//      })
+      MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {
-          MobileCore.configureWith(appId: currentAppId)
+          MobileCore.configureWith(appId: "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development")
+          MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox" : true])
+          print("Registered Extension!!")
+          MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
+          
       })
+
       
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
@@ -104,13 +113,3 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
 //        Messaging.self
 //    ]
 //
-//    // MobileCore.setLogLevel(.trace)
-//    MobileCore.registerExtensions(extensions, {
-//        MobileCore.configureWith(appId: "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development")
-//        MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox" : true])
-//        print("Registered Extension!!")
-//        if appState != .background {
-//            MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
-//        }
-//    })
-//    return true
