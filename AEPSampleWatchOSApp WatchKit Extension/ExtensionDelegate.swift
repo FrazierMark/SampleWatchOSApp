@@ -30,7 +30,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     
       let currentAppId = "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development"
       
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self, Signal.self, AEPEdgeIdentity.Identity.self, Messaging.self]
 
       MobileCore.setLogLevel(.trace)
 

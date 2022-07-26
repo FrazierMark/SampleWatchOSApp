@@ -11,16 +11,18 @@
 		67574D3F2890740A00F847F0 /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D3E2890737C00F847F0 /* CoreView.swift */; };
 		67574D402890747700F847F0 /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D3D2890721C00F847F0 /* ConsentView.swift */; };
 		67574D42289074D000F847F0 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D41289074D000F847F0 /* ButtonStyle.swift */; };
-		67574D452890761000F847F0 /* AEPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D442890761000F847F0 /* AEPCore */; };
-		67574D472890761000F847F0 /* AEPIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D462890761000F847F0 /* AEPIdentity */; };
-		67574D492890761000F847F0 /* AEPLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D482890761000F847F0 /* AEPLifecycle */; };
-		67574D4B2890761000F847F0 /* AEPServices in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D4A2890761000F847F0 /* AEPServices */; };
-		67574D4D2890761000F847F0 /* AEPSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D4C2890761000F847F0 /* AEPSignal */; };
-		67574D502890762000F847F0 /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D4F2890762000F847F0 /* AEPMessaging */; };
-		67574D532890763000F847F0 /* AEPEdgeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D522890763000F847F0 /* AEPEdgeIdentity */; };
-		67574D562890763F00F847F0 /* AEPEdge in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D552890763F00F847F0 /* AEPEdge */; };
-		67574D592890764B00F847F0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D582890764B00F847F0 /* AEPEdgeConsent */; };
-		67574D5C2890765700F847F0 /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D5B2890765700F847F0 /* AEPUserProfile */; };
+		67574D682890878C00F847F0 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */; };
+		67574D692890879300F847F0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D5F2890863F00F847F0 /* AdSupport.framework */; };
+		67574D6C289087A200F847F0 /* AEPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6B289087A200F847F0 /* AEPCore */; };
+		67574D6E289087A200F847F0 /* AEPIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6D289087A200F847F0 /* AEPIdentity */; };
+		67574D70289087A200F847F0 /* AEPLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6F289087A200F847F0 /* AEPLifecycle */; };
+		67574D72289087A200F847F0 /* AEPServices in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D71289087A200F847F0 /* AEPServices */; };
+		67574D74289087A200F847F0 /* AEPSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D73289087A200F847F0 /* AEPSignal */; };
+		67574D77289087AF00F847F0 /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D76289087AF00F847F0 /* AEPMessaging */; };
+		67574D7A289087BD00F847F0 /* AEPEdgeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D79289087BD00F847F0 /* AEPEdgeIdentity */; };
+		67574D7D289087CA00F847F0 /* AEPEdge in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D7C289087CA00F847F0 /* AEPEdge */; };
+		67574D80289087D800F847F0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D7F289087D800F847F0 /* AEPEdgeConsent */; };
+		67574D83289087E700F847F0 /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D82289087E700F847F0 /* AEPUserProfile */; };
 		677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		677EC7602888C52C008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC75F2888C52C008B97B1 /* Assets.xcassets */; };
 		677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677EC76A2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift */; };
@@ -64,6 +66,8 @@
 		67574D3D2890721C00F847F0 /* ConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentView.swift; sourceTree = "<group>"; };
 		67574D3E2890737C00F847F0 /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
 		67574D41289074D000F847F0 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		67574D5F2890863F00F847F0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		677EC7562888C52C008B97B1 /* AEPSampleWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPSampleWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AEPSampleWatchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75F2888C52C008B97B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,17 +87,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67574D562890763F00F847F0 /* AEPEdge in Frameworks */,
-				67574D4B2890761000F847F0 /* AEPServices in Frameworks */,
-				67574D4D2890761000F847F0 /* AEPSignal in Frameworks */,
-				67574D592890764B00F847F0 /* AEPEdgeConsent in Frameworks */,
-				67574D452890761000F847F0 /* AEPCore in Frameworks */,
-				67574D5C2890765700F847F0 /* AEPUserProfile in Frameworks */,
-				67574D502890762000F847F0 /* AEPMessaging in Frameworks */,
-				67574D532890763000F847F0 /* AEPEdgeIdentity in Frameworks */,
+				67574D7D289087CA00F847F0 /* AEPEdge in Frameworks */,
+				67574D72289087A200F847F0 /* AEPServices in Frameworks */,
+				67574D74289087A200F847F0 /* AEPSignal in Frameworks */,
+				67574D80289087D800F847F0 /* AEPEdgeConsent in Frameworks */,
+				67574D6C289087A200F847F0 /* AEPCore in Frameworks */,
+				67574D83289087E700F847F0 /* AEPUserProfile in Frameworks */,
+				67574D77289087AF00F847F0 /* AEPMessaging in Frameworks */,
+				67574D7A289087BD00F847F0 /* AEPEdgeIdentity in Frameworks */,
 				67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */,
-				67574D492890761000F847F0 /* AEPLifecycle in Frameworks */,
-				67574D472890761000F847F0 /* AEPIdentity in Frameworks */,
+				67574D70289087A200F847F0 /* AEPLifecycle in Frameworks */,
+				67574D6E289087A200F847F0 /* AEPIdentity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67574D682890878C00F847F0 /* AppTrackingTransparency.framework in Frameworks */,
+				67574D692890879300F847F0 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,13 +159,13 @@
 				677EC7702888C52C008B97B1 /* NotificationView.swift */,
 				67574D3D2890721C00F847F0 /* ConsentView.swift */,
 				677EC7722888C52C008B97B1 /* ComplicationController.swift */,
+				67574D41289074D000F847F0 /* ButtonStyle.swift */,
 				671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */,
 				67574D3E2890737C00F847F0 /* CoreView.swift */,
 				677EC7742888C52D008B97B1 /* Assets.xcassets */,
 				677EC7792888C52D008B97B1 /* Info.plist */,
 				677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */,
 				677EC7762888C52D008B97B1 /* Preview Content */,
-				67574D41289074D000F847F0 /* ButtonStyle.swift */,
 			);
 			path = "AEPSampleWatchOSApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 		67FDC50E288B2D360097EADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */,
+				67574D5F2890863F00F847F0 /* AdSupport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,16 +222,16 @@
 			);
 			name = "AEPSampleWatchOSApp WatchKit App";
 			packageProductDependencies = (
-				67574D442890761000F847F0 /* AEPCore */,
-				67574D462890761000F847F0 /* AEPIdentity */,
-				67574D482890761000F847F0 /* AEPLifecycle */,
-				67574D4A2890761000F847F0 /* AEPServices */,
-				67574D4C2890761000F847F0 /* AEPSignal */,
-				67574D4F2890762000F847F0 /* AEPMessaging */,
-				67574D522890763000F847F0 /* AEPEdgeIdentity */,
-				67574D552890763F00F847F0 /* AEPEdge */,
-				67574D582890764B00F847F0 /* AEPEdgeConsent */,
-				67574D5B2890765700F847F0 /* AEPUserProfile */,
+				67574D6B289087A200F847F0 /* AEPCore */,
+				67574D6D289087A200F847F0 /* AEPIdentity */,
+				67574D6F289087A200F847F0 /* AEPLifecycle */,
+				67574D71289087A200F847F0 /* AEPServices */,
+				67574D73289087A200F847F0 /* AEPSignal */,
+				67574D76289087AF00F847F0 /* AEPMessaging */,
+				67574D79289087BD00F847F0 /* AEPEdgeIdentity */,
+				67574D7C289087CA00F847F0 /* AEPEdge */,
+				67574D7F289087D800F847F0 /* AEPEdgeConsent */,
+				67574D82289087E700F847F0 /* AEPUserProfile */,
 			);
 			productName = "AEPSampleWatchOSApp WatchKit App";
 			productReference = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */;
@@ -257,12 +265,12 @@
 			);
 			mainGroup = 677EC74F2888C52C008B97B1;
 			packageReferences = (
-				67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */,
-				67574D4E2890762000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */,
-				67574D512890763000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */,
-				67574D542890763F00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */,
-				67574D572890764B00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */,
-				67574D5A2890765700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */,
+				67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */,
+				67574D75289087AF00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */,
+				67574D78289087BD00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */,
+				67574D7B289087CA00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */,
+				67574D7E289087D800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */,
+				67574D81289087E700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */,
 			);
 			productRefGroup = 677EC7572888C52C008B97B1 /* Products */;
 			projectDirPath = "";
@@ -565,7 +573,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */ = {
+		67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-core-ios";
 			requirement = {
@@ -573,7 +581,7 @@
 				kind = branch;
 			};
 		};
-		67574D4E2890762000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */ = {
+		67574D75289087AF00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-messaging-ios";
 			requirement = {
@@ -581,7 +589,7 @@
 				kind = branch;
 			};
 		};
-		67574D512890763000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */ = {
+		67574D78289087BD00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-edgeidentity-ios";
 			requirement = {
@@ -589,7 +597,7 @@
 				kind = branch;
 			};
 		};
-		67574D542890763F00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */ = {
+		67574D7B289087CA00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-edge-ios";
 			requirement = {
@@ -597,7 +605,7 @@
 				kind = branch;
 			};
 		};
-		67574D572890764B00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */ = {
+		67574D7E289087D800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-edgeconsent-ios";
 			requirement = {
@@ -605,7 +613,7 @@
 				kind = branch;
 			};
 		};
-		67574D5A2890765700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */ = {
+		67574D81289087E700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-userprofile-ios";
 			requirement = {
@@ -616,54 +624,54 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		67574D442890761000F847F0 /* AEPCore */ = {
+		67574D6B289087A200F847F0 /* AEPCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
+			package = 67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
 			productName = AEPCore;
 		};
-		67574D462890761000F847F0 /* AEPIdentity */ = {
+		67574D6D289087A200F847F0 /* AEPIdentity */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
+			package = 67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
 			productName = AEPIdentity;
 		};
-		67574D482890761000F847F0 /* AEPLifecycle */ = {
+		67574D6F289087A200F847F0 /* AEPLifecycle */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
+			package = 67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
 			productName = AEPLifecycle;
 		};
-		67574D4A2890761000F847F0 /* AEPServices */ = {
+		67574D71289087A200F847F0 /* AEPServices */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
+			package = 67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
 			productName = AEPServices;
 		};
-		67574D4C2890761000F847F0 /* AEPSignal */ = {
+		67574D73289087A200F847F0 /* AEPSignal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D432890761000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
+			package = 67574D6A289087A200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-core-ios" */;
 			productName = AEPSignal;
 		};
-		67574D4F2890762000F847F0 /* AEPMessaging */ = {
+		67574D76289087AF00F847F0 /* AEPMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D4E2890762000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */;
+			package = 67574D75289087AF00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */;
 			productName = AEPMessaging;
 		};
-		67574D522890763000F847F0 /* AEPEdgeIdentity */ = {
+		67574D79289087BD00F847F0 /* AEPEdgeIdentity */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D512890763000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */;
+			package = 67574D78289087BD00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */;
 			productName = AEPEdgeIdentity;
 		};
-		67574D552890763F00F847F0 /* AEPEdge */ = {
+		67574D7C289087CA00F847F0 /* AEPEdge */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D542890763F00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */;
+			package = 67574D7B289087CA00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */;
 			productName = AEPEdge;
 		};
-		67574D582890764B00F847F0 /* AEPEdgeConsent */ = {
+		67574D7F289087D800F847F0 /* AEPEdgeConsent */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D572890764B00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */;
+			package = 67574D7E289087D800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */;
 			productName = AEPEdgeConsent;
 		};
-		67574D5B2890765700F847F0 /* AEPUserProfile */ = {
+		67574D82289087E700F847F0 /* AEPUserProfile */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D5A2890765700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */;
+			package = 67574D81289087E700F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */;
 			productName = AEPUserProfile;
 		};
 		67FDC51E288B5B630097EADB /* AEPMessaging */ = {
