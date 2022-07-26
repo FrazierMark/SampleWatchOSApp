@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FrazierMark/aepsdk-edgeconsent-ios",
       "state" : {
-        "revision" : "42449c7c8aa262f9ac975de9415266c6f362d6d6",
-        "version" : "1.0.1"
+        "branch" : "main",
+        "revision" : "c9e7884f04c5ebc2f1d808426da4078a5b474b18"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FrazierMark/aepsdk-userprofile-ios",
       "state" : {
-        "revision" : "5fab4c979bf29d2086a6521969a9f8ad38d69062",
-        "version" : "3.0.1"
+        "branch" : "main",
+        "revision" : "93463f2f3e983b7bfd622e58cf1dec3ae94aa103"
       }
     }
   ],

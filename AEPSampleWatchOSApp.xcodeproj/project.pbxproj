@@ -16,8 +16,8 @@
 		671E07242889DE2700A9ABC6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */; };
 		67574D2D2890584400F847F0 /* AEPEdgeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D2C2890584400F847F0 /* AEPEdgeIdentity */; };
 		67574D302890586000F847F0 /* AEPEdge in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D2F2890586000F847F0 /* AEPEdge */; };
-		67574D3328905B3800F847F0 /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D3228905B3800F847F0 /* AEPUserProfile */; };
-		67574D3628905C5E00F847F0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D3528905C5E00F847F0 /* AEPEdgeConsent */; };
+		67574D3928905D9000F847F0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D3828905D9000F847F0 /* AEPEdgeConsent */; };
+		67574D3C28905DA200F847F0 /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D3B28905DA200F847F0 /* AEPUserProfile */; };
 		677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		677EC7602888C52C008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC75F2888C52C008B97B1 /* Assets.xcassets */; };
 		677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677EC76A2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift */; };
@@ -80,11 +80,11 @@
 				67574D302890586000F847F0 /* AEPEdge in Frameworks */,
 				67046DA3288F06C6003A478C /* AEPServices in Frameworks */,
 				67046DA5288F06C6003A478C /* AEPSignal in Frameworks */,
+				67574D3928905D9000F847F0 /* AEPEdgeConsent in Frameworks */,
 				67046D9D288F06C6003A478C /* AEPCore in Frameworks */,
-				67574D3328905B3800F847F0 /* AEPUserProfile in Frameworks */,
+				67574D3C28905DA200F847F0 /* AEPUserProfile in Frameworks */,
 				67046DA8288F06DA003A478C /* AEPMessaging in Frameworks */,
 				67574D2D2890584400F847F0 /* AEPEdgeIdentity in Frameworks */,
-				67574D3628905C5E00F847F0 /* AEPEdgeConsent in Frameworks */,
 				67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */,
 				67046DA1288F06C6003A478C /* AEPLifecycle in Frameworks */,
 				67046D9F288F06C6003A478C /* AEPIdentity in Frameworks */,
@@ -213,8 +213,8 @@
 				67046DA7288F06DA003A478C /* AEPMessaging */,
 				67574D2C2890584400F847F0 /* AEPEdgeIdentity */,
 				67574D2F2890586000F847F0 /* AEPEdge */,
-				67574D3228905B3800F847F0 /* AEPUserProfile */,
-				67574D3528905C5E00F847F0 /* AEPEdgeConsent */,
+				67574D3828905D9000F847F0 /* AEPEdgeConsent */,
+				67574D3B28905DA200F847F0 /* AEPUserProfile */,
 			);
 			productName = "AEPSampleWatchOSApp WatchKit App";
 			productReference = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */;
@@ -252,8 +252,8 @@
 				67046DA6288F06DA003A478C /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */,
 				67574D2B2890584400F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */,
 				67574D2E2890586000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */,
-				67574D3128905B3800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */,
-				67574D3428905C5E00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */,
+				67574D3728905D9000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */,
+				67574D3A28905DA200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */,
 			);
 			productRefGroup = 677EC7572888C52C008B97B1 /* Products */;
 			projectDirPath = "";
@@ -585,20 +585,20 @@
 				kind = branch;
 			};
 		};
-		67574D3128905B3800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FrazierMark/aepsdk-userprofile-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		67574D3428905C5E00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */ = {
+		67574D3728905D9000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FrazierMark/aepsdk-edgeconsent-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
+			};
+		};
+		67574D3A28905DA200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-userprofile-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -644,15 +644,15 @@
 			package = 67574D2E2890586000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */;
 			productName = AEPEdge;
 		};
-		67574D3228905B3800F847F0 /* AEPUserProfile */ = {
+		67574D3828905D9000F847F0 /* AEPEdgeConsent */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67574D3128905B3800F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */;
-			productName = AEPUserProfile;
-		};
-		67574D3528905C5E00F847F0 /* AEPEdgeConsent */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67574D3428905C5E00F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */;
+			package = 67574D3728905D9000F847F0 /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */;
 			productName = AEPEdgeConsent;
+		};
+		67574D3B28905DA200F847F0 /* AEPUserProfile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67574D3A28905DA200F847F0 /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */;
+			productName = AEPUserProfile;
 		};
 		67FDC51E288B5B630097EADB /* AEPMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
