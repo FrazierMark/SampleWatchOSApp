@@ -11,8 +11,6 @@
 		67574D3F2890740A00F847F0 /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D3E2890737C00F847F0 /* CoreView.swift */; };
 		67574D402890747700F847F0 /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D3D2890721C00F847F0 /* ConsentView.swift */; };
 		67574D42289074D000F847F0 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D41289074D000F847F0 /* ButtonStyle.swift */; };
-		67574D682890878C00F847F0 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */; };
-		67574D692890879300F847F0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D5F2890863F00F847F0 /* AdSupport.framework */; };
 		67574D6C289087A200F847F0 /* AEPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6B289087A200F847F0 /* AEPCore */; };
 		67574D6E289087A200F847F0 /* AEPIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6D289087A200F847F0 /* AEPIdentity */; };
 		67574D70289087A200F847F0 /* AEPLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D6F289087A200F847F0 /* AEPLifecycle */; };
@@ -23,6 +21,26 @@
 		67574D7D289087CA00F847F0 /* AEPEdge in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D7C289087CA00F847F0 /* AEPEdge */; };
 		67574D80289087D800F847F0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D7F289087D800F847F0 /* AEPEdgeConsent */; };
 		67574D83289087E700F847F0 /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 67574D82289087E700F847F0 /* AEPUserProfile */; };
+		67574D852890909F00F847F0 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D842890909F00F847F0 /* EdgeView.swift */; };
+		67574D9C2890926700F847F0 /* ProductListItemsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D8C2890926600F847F0 /* ProductListItemsItem.swift */; };
+		67574D9D2890926700F847F0 /* ProductListReopens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D8D2890926600F847F0 /* ProductListReopens.swift */; };
+		67574D9E2890926700F847F0 /* PaymentsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D8E2890926600F847F0 /* PaymentsItem.swift */; };
+		67574D9F2890926700F847F0 /* MobileSDKCommerceSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D8F2890926600F847F0 /* MobileSDKCommerceSchema.swift */; };
+		67574DA02890926700F847F0 /* ProductViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D902890926600F847F0 /* ProductViews.swift */; };
+		67574DA12890926700F847F0 /* InStorePurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D912890926600F847F0 /* InStorePurchase.swift */; };
+		67574DA22890926700F847F0 /* ProductListAdds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D922890926600F847F0 /* ProductListAdds.swift */; };
+		67574DA32890926700F847F0 /* ProductListRemovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D932890926600F847F0 /* ProductListRemovals.swift */; };
+		67574DA42890926700F847F0 /* ProductListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D942890926600F847F0 /* ProductListViews.swift */; };
+		67574DA52890926700F847F0 /* SaveForLaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D952890926600F847F0 /* SaveForLaters.swift */; };
+		67574DA62890926700F847F0 /* Checkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D962890926600F847F0 /* Checkouts.swift */; };
+		67574DA72890926700F847F0 /* ProductListOpens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D972890926600F847F0 /* ProductListOpens.swift */; };
+		67574DA82890926700F847F0 /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D982890926600F847F0 /* Purchases.swift */; };
+		67574DA92890926700F847F0 /* CartAbandons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D992890926600F847F0 /* CartAbandons.swift */; };
+		67574DAA2890926700F847F0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D9A2890926700F847F0 /* Order.swift */; };
+		67574DAB2890926700F847F0 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D9B2890926700F847F0 /* Commerce.swift */; };
+		67574DAD2890AAC000F847F0 /* EdgeIdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */; };
+		67601B952890ABAF006E6BE6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D5F2890863F00F847F0 /* AdSupport.framework */; };
+		67601B962890ABB6006E6BE6 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */; };
 		677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		677EC7602888C52C008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC75F2888C52C008B97B1 /* Assets.xcassets */; };
 		677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677EC76A2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift */; };
@@ -68,6 +86,24 @@
 		67574D41289074D000F847F0 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		67574D5F2890863F00F847F0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		67574D842890909F00F847F0 /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
+		67574D8C2890926600F847F0 /* ProductListItemsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListItemsItem.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListItemsItem.swift"; sourceTree = SOURCE_ROOT; };
+		67574D8D2890926600F847F0 /* ProductListReopens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListReopens.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListReopens.swift"; sourceTree = SOURCE_ROOT; };
+		67574D8E2890926600F847F0 /* PaymentsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentsItem.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/PaymentsItem.swift"; sourceTree = SOURCE_ROOT; };
+		67574D8F2890926600F847F0 /* MobileSDKCommerceSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobileSDKCommerceSchema.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/MobileSDKCommerceSchema.swift"; sourceTree = SOURCE_ROOT; };
+		67574D902890926600F847F0 /* ProductViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViews.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductViews.swift"; sourceTree = SOURCE_ROOT; };
+		67574D912890926600F847F0 /* InStorePurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InStorePurchase.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/InStorePurchase.swift"; sourceTree = SOURCE_ROOT; };
+		67574D922890926600F847F0 /* ProductListAdds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListAdds.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListAdds.swift"; sourceTree = SOURCE_ROOT; };
+		67574D932890926600F847F0 /* ProductListRemovals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListRemovals.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListRemovals.swift"; sourceTree = SOURCE_ROOT; };
+		67574D942890926600F847F0 /* ProductListViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListViews.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListViews.swift"; sourceTree = SOURCE_ROOT; };
+		67574D952890926600F847F0 /* SaveForLaters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveForLaters.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/SaveForLaters.swift"; sourceTree = SOURCE_ROOT; };
+		67574D962890926600F847F0 /* Checkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkouts.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/Checkouts.swift"; sourceTree = SOURCE_ROOT; };
+		67574D972890926600F847F0 /* ProductListOpens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListOpens.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListOpens.swift"; sourceTree = SOURCE_ROOT; };
+		67574D982890926600F847F0 /* Purchases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchases.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/Purchases.swift"; sourceTree = SOURCE_ROOT; };
+		67574D992890926600F847F0 /* CartAbandons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartAbandons.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/CartAbandons.swift"; sourceTree = SOURCE_ROOT; };
+		67574D9A2890926700F847F0 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/Order.swift"; sourceTree = SOURCE_ROOT; };
+		67574D9B2890926700F847F0 /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Commerce.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/Commerce.swift"; sourceTree = SOURCE_ROOT; };
+		67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeIdentityView.swift; sourceTree = "<group>"; };
 		677EC7562888C52C008B97B1 /* AEPSampleWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPSampleWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AEPSampleWatchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75F2888C52C008B97B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,8 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67574D682890878C00F847F0 /* AppTrackingTransparency.framework in Frameworks */,
-				67574D692890879300F847F0 /* AdSupport.framework in Frameworks */,
+				67601B952890ABAF006E6BE6 /* AdSupport.framework in Frameworks */,
+				67601B962890ABB6006E6BE6 /* AppTrackingTransparency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +154,29 @@
 			children = (
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		67574D8B2890923F00F847F0 /* xdmlib2 */ = {
+			isa = PBXGroup;
+			children = (
+				67574D992890926600F847F0 /* CartAbandons.swift */,
+				67574D962890926600F847F0 /* Checkouts.swift */,
+				67574D9B2890926700F847F0 /* Commerce.swift */,
+				67574D912890926600F847F0 /* InStorePurchase.swift */,
+				67574D8F2890926600F847F0 /* MobileSDKCommerceSchema.swift */,
+				67574D9A2890926700F847F0 /* Order.swift */,
+				67574D8E2890926600F847F0 /* PaymentsItem.swift */,
+				67574D922890926600F847F0 /* ProductListAdds.swift */,
+				67574D8C2890926600F847F0 /* ProductListItemsItem.swift */,
+				67574D972890926600F847F0 /* ProductListOpens.swift */,
+				67574D932890926600F847F0 /* ProductListRemovals.swift */,
+				67574D8D2890926600F847F0 /* ProductListReopens.swift */,
+				67574D942890926600F847F0 /* ProductListViews.swift */,
+				67574D902890926600F847F0 /* ProductViews.swift */,
+				67574D982890926600F847F0 /* Purchases.swift */,
+				67574D952890926600F847F0 /* SaveForLaters.swift */,
+			);
+			path = xdmlib2;
 			sourceTree = "<group>";
 		};
 		677EC74F2888C52C008B97B1 = {
@@ -153,15 +212,18 @@
 		677EC7692888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				67574D8B2890923F00F847F0 /* xdmlib2 */,
 				677EC76A2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift */,
 				677EC76C2888C52C008B97B1 /* MenuView.swift */,
 				677EC76E2888C52C008B97B1 /* NotificationController.swift */,
 				677EC7702888C52C008B97B1 /* NotificationView.swift */,
 				67574D3D2890721C00F847F0 /* ConsentView.swift */,
 				677EC7722888C52C008B97B1 /* ComplicationController.swift */,
+				67574D842890909F00F847F0 /* EdgeView.swift */,
 				67574D41289074D000F847F0 /* ButtonStyle.swift */,
 				671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */,
 				67574D3E2890737C00F847F0 /* CoreView.swift */,
+				67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */,
 				677EC7742888C52D008B97B1 /* Assets.xcassets */,
 				677EC7792888C52D008B97B1 /* Info.plist */,
 				677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */,
@@ -307,15 +369,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67574D9F2890926700F847F0 /* MobileSDKCommerceSchema.swift in Sources */,
+				67574DA02890926700F847F0 /* ProductViews.swift in Sources */,
 				677EC76F2888C52C008B97B1 /* NotificationController.swift in Sources */,
+				67574DA72890926700F847F0 /* ProductListOpens.swift in Sources */,
 				67574D402890747700F847F0 /* ConsentView.swift in Sources */,
+				67574DA32890926700F847F0 /* ProductListRemovals.swift in Sources */,
 				677EC76D2888C52C008B97B1 /* MenuView.swift in Sources */,
+				67574DA22890926700F847F0 /* ProductListAdds.swift in Sources */,
 				671E07242889DE2700A9ABC6 /* ExtensionDelegate.swift in Sources */,
+				67574D9C2890926700F847F0 /* ProductListItemsItem.swift in Sources */,
+				67574DAB2890926700F847F0 /* Commerce.swift in Sources */,
 				677EC7732888C52C008B97B1 /* ComplicationController.swift in Sources */,
 				677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */,
+				67574DAA2890926700F847F0 /* Order.swift in Sources */,
+				67574DA42890926700F847F0 /* ProductListViews.swift in Sources */,
 				67574D42289074D000F847F0 /* ButtonStyle.swift in Sources */,
+				67574DA62890926700F847F0 /* Checkouts.swift in Sources */,
+				67574D9D2890926700F847F0 /* ProductListReopens.swift in Sources */,
+				67574DAD2890AAC000F847F0 /* EdgeIdentityView.swift in Sources */,
+				67574D852890909F00F847F0 /* EdgeView.swift in Sources */,
+				67574D9E2890926700F847F0 /* PaymentsItem.swift in Sources */,
 				677EC7712888C52C008B97B1 /* NotificationView.swift in Sources */,
+				67574DA82890926700F847F0 /* Purchases.swift in Sources */,
 				67574D3F2890740A00F847F0 /* CoreView.swift in Sources */,
+				67574DA92890926700F847F0 /* CartAbandons.swift in Sources */,
+				67574DA12890926700F847F0 /* InStorePurchase.swift in Sources */,
+				67574DA52890926700F847F0 /* SaveForLaters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
