@@ -23,10 +23,10 @@ struct EdgeView: View {
     @State private var showProductReviewMessage = false
     
     /// Product review string
-    @State private var reviewText: String = ""
+    @State private var reviewText: String = "Great Product"
     
     /// Email address as string,  used as the product reviewer identifier
-    @State private var reviewerEmail: String = ""
+    @State private var reviewerEmail: String = "TEST@TEST.com"
     
     /// Product rating as integer from 1 to 5
     @State private var reviewRating: Int = 5
