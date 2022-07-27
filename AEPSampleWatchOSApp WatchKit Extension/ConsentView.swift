@@ -17,7 +17,7 @@ struct ConsentView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 10) {
                 Button("Set Collect Consent - Yes") {
                     let collectConsent = ["collect": ["val": "y"]]
                     let currentConsents = ["consents": collectConsent]

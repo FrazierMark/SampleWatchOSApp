@@ -67,18 +67,25 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
         print(deviceToken.reduce("") { $0 + String(format: "%02x",
                                                    $1) })
         // Send push token to experience platform
-        // MobileCore.setPushIdentifier(deviceToken)
+        MobileCore.setPushIdentifier(deviceToken)
     }
     
-
     
     func applicationDidEnterBackground() {
         print("applicationDidEnterBackground")
+        MobileCore.lifecyclePause()
         
     }
     func applicationDidBecomeActive() {
         print("applicationDidBecomeActive")
+        MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+    
+    func applicationWillEnterForeground() {
+        // step-init-start
+        MobileCore.lifecycleStart(additionalContextData: nil)
+        // step-init-end
     }
 
     func applicationWillResignActive() {
@@ -87,28 +94,3 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     }
 
   }
-
-
-
-
-
-
-//
-//func application(_ application: WKApplication, didFinishLaunchingWithOptions launchOptions: [WKExtension : Any]?) -> Bool {
-//
-//    MobileCore.setLogLevel(.debug)
-//
-//    let appState = application.applicationState;
-//
-//    let extensions = [
-//        //Edge.self,
-//        //Consent.self,
-//        // Assurance.self,
-//        // AEPEdgeIdentity.Identity.self,
-//        // AEPIdentity.Identity.self,
-//        //UserProfile.self,
-//        //Lifecycle.self,
-//        Signal.self,
-//        Messaging.self
-//    ]
-//
