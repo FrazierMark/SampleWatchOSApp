@@ -40,10 +40,10 @@ struct EdgeView: View {
     ]
     
     // set this property to forward the product reviews to your dataset
-    private let PRODUCT_REVIEW_DATASET_ID = ""
+    private let PRODUCT_REVIEW_DATASET_ID = "5"
     
     // set this property to your org as shown in your custom product reviews schema
-    private let TENANT_ID = ""
+    private let TENANT_ID = "5"
     
     var body: some View {
         ScrollView {
@@ -130,7 +130,7 @@ struct EdgeView: View {
             Text("XDM Product Review Example").bold()
             
             TextField("Reviewer email", text: $reviewerEmail)
-                // .textFieldStyle(.none)
+                //.textFieldStyle(.none)
                 .textInputAutocapitalization(.none)
             
             HStack {

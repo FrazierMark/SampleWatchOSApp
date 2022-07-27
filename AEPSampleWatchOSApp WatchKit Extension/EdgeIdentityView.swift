@@ -121,7 +121,7 @@ struct EdgeIdentityView: View {
                             Text("Set ad ID as all-zeros")
                         }.buttonStyle(CustomButtonStyle())
                         Button(action: {
-                            MobileCore.setAdvertisingIdentifier("")
+                            MobileCore.setAdvertisingIdentifier("00000000-0000-0000-0000-000000000000")
                         }) {
                             Text("Set ad ID as empty string")
                         }.buttonStyle(CustomButtonStyle())
@@ -134,9 +134,9 @@ struct EdgeIdentityView: View {
                     Button(action: {
                         self.urlVariablesText = ""
 
-//                        AEPEdgeIdentity.Identity.getUrlVariables { urlVariablesString, _ in
-//                            self.urlVariablesText = urlVariablesString ?? "URLVariables not generated"
-//                        }
+                        AEPEdgeIdentity.Identity.getUrlVariables { urlVariablesString, _ in
+                            self.urlVariablesText = urlVariablesString ?? "URLVariables not generated"
+                        }
                         
                     }) {
                         Text("Get URLVariables")
