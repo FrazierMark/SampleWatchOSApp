@@ -41,11 +41,11 @@ struct MenuView: View {
                     NavigationLink(destination: ConsentView().navigationBarTitle("Consent")) {
                         Text("Consent")
                     }
-                    //
-                    //                    NavigationLink(destination: EdgeIdentityView().navigationBarTitle("Edge Identity")) {
-                    //                        Text("Edge Identity")
-                    //                    }
-                    //                }
+
+                    NavigationLink(destination: EdgeIdentityView().navigationBarTitle("Edge Identity")) {
+                        Text("Edge Identity")
+                    }
+                
                     //
                     //                Section(header: Text("Validation")) {
                     //                    NavigationLink(destination: AssuranceView().navigationBarTitle("Assurance")) {

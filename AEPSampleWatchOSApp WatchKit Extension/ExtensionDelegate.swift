@@ -29,11 +29,9 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
         
   func applicationDidFinishLaunching() {
       
-    
-//      let currentAppId = "3149c49c3910/301aa57f50b5/launch-387236dc11bc-development"
-//      let currentAppId = "3149c49c3910/937cb8213df9/launch-ac813039a100-development"
+
       
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self, Signal.self, AEPEdgeIdentity.Identity.self, Messaging.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self, AEPEdgeIdentity.Identity.self, Messaging.self]
 
       MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {
