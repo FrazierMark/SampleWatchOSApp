@@ -106,6 +106,7 @@
 		67574D9B2890926700F847F0 /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Commerce.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/Commerce.swift"; sourceTree = SOURCE_ROOT; };
 		67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeIdentityView.swift; sourceTree = "<group>"; };
 		6763FFD42891C2CB004552A0 /* AdIdUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdIdUtils.swift; sourceTree = "<group>"; };
+		6763FFD6289343BF004552A0 /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		677EC7562888C52C008B97B1 /* AEPSampleWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPSampleWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AEPSampleWatchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75F2888C52C008B97B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		670EFDBE288B82F0008470F2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				6763FFD6289343BF004552A0 /* aepsdk-assurance-ios */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
