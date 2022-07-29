@@ -54,7 +54,6 @@
 		678F3E54289351CD00D2AD61 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E50289351C900D2AD61 /* UserNotifications.framework */; };
 		678F3E56289351D100D2AD61 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */; };
 		67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67FDC51E288B5B630097EADB /* AEPMessaging */; };
-		67FEC87128936D4800996F58 /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F3E58289369F400D2AD61 /* empty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +123,6 @@
 		677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		678F3E50289351C900D2AD61 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
 		678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
-		678F3E58289369F400D2AD61 /* empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +239,6 @@
 				677EC7792888C52D008B97B1 /* Info.plist */,
 				677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */,
 				677EC7762888C52D008B97B1 /* Preview Content */,
-				678F3E58289369F400D2AD61 /* empty.swift */,
 			);
 			path = "AEPSampleWatchOSApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -392,7 +389,6 @@
 				677EC76D2888C52C008B97B1 /* MenuView.swift in Sources */,
 				67574DA22890926700F847F0 /* ProductListAdds.swift in Sources */,
 				671E07242889DE2700A9ABC6 /* ExtensionDelegate.swift in Sources */,
-				67FEC87128936D4800996F58 /* empty.swift in Sources */,
 				67574D9C2890926700F847F0 /* ProductListItemsItem.swift in Sources */,
 				67574DAB2890926700F847F0 /* Commerce.swift in Sources */,
 				677EC7732888C52C008B97B1 /* ComplicationController.swift in Sources */,
@@ -619,7 +615,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.AEPSampleWatchOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
 			};
 			name = Debug;
 		};
@@ -632,7 +632,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.AEPSampleWatchOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
 			};
 			name = Release;
 		};
