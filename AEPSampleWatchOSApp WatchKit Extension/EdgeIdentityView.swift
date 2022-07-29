@@ -11,6 +11,7 @@ import AEPCore
 import AEPEdgeIdentity
 import Foundation
 import SwiftUI
+import WatchKit
 
 struct EdgeIdentityView: View {
     @State var currentEcid = ""

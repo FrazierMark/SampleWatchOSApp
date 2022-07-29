@@ -95,31 +95,34 @@ struct MessagingView: View {
         let content = UNMutableNotificationContent()
         content.title = "Simple notification"
         content.body = "This notification does not have any custom actions."
+        content.sound = UNNotificationSound.default
         
         /// the structure of `userInfo` is the same as you'd see with an actual push message.
         /// the values are made up for demonstration purposes.
-        content.userInfo = [
-            "_xdm": [
-                "cjm": [
-                    "_experience": [
-                        "customerJourneyManagement": [
-                            "messageExecution": [
-                                "messageExecutionID": "00000000-0000-0000-0000-000000000000",
-                                "messageID": "message-1",
-                                "journeyVersionID": "someJourneyVersionId",
-                                "journeyVersionInstanceId": "someJourneyVersionInstanceId"
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ]
+//        content.userInfo = [
+//            "_xdm": [
+//                "cjm": [
+//                    "_experience": [
+//                        "customerJourneyManagement": [
+//                            "messageExecution": [
+//                                "messageExecutionID": "00000000-0000-0000-0000-000000000000",
+//                                "messageID": "message-1",
+//                                "journeyVersionID": "someJourneyVersionId",
+//                                "journeyVersionInstanceId": "someJourneyVersionInstanceId"
+//                            ]
+//                        ]
+//                    ]
+//                ]
+//            ]
+//        ]
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
         let identifier = "Simple local notification identifier"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.add(request, withCompletionHandler: handleNotificationError(_:))
+        notificationCenter.removeAllPendingNotificationRequests()
+        print("Call Sample Notifications")
+        notificationCenter.add(request)
     }
     
     func scheduleNotificationWithCustomAction() {
