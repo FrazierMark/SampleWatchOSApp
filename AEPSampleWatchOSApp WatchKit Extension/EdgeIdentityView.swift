@@ -52,7 +52,7 @@ struct EdgeIdentityView: View {
                 }.buttonStyle(CustomButtonStyle())
 
                 Text(currentEcid)
-                    .lineLimit(1)
+                    .lineLimit(2)
                     .minimumScaleFactor(0.5)
 //                    .contextMenu {
 //                        Button(action: {
@@ -99,7 +99,7 @@ struct EdgeIdentityView: View {
                     Text(trackingAuthorizationResultText)
                     Text("\(adID?.uuidString ?? "")")
 
-                    HStack {
+                    VStack(alignment: .leading, spacing: 12) {
                         Button(action: {
                             MobileCore.setAdvertisingIdentifier(adIdText)
                         }) {
@@ -110,7 +110,7 @@ struct EdgeIdentityView: View {
                             .textInputAutocapitalization(.none)
                     }
 
-                    HStack {
+                    VStack(alignment: .leading, spacing: 12) {
                         Button(action: {
                             MobileCore.setAdvertisingIdentifier(nil)
                         }) {

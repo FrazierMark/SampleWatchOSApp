@@ -20,15 +20,15 @@ struct MessagingView: View {
     @State var currentIdentityMap: IdentityMap?
 
     let LOG_PREFIX = "MessagingViewController"
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
             }.padding().onAppear() {
-                MobileCore.track(state: "Messaging", data:nil)
+                MobileCore.track(state: "Messaging", data: nil)
             }
-            
-            
+
+
             VStack(alignment: .leading, spacing: 12) {
                 Text("Current ECID:")
                 Button(action: {
@@ -43,15 +43,15 @@ struct MessagingView: View {
                 Text(currentEcid)
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
-                
-                
+
+
                 VStack(alignment: .leading, spacing: 12) {
                     Text("Push Messaging")
                     Text("Messaging SDK setup is complete with ECID:")
                     Text(currentEcid)
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
-                    
+
                     Spacer(minLength: 15)
                     Text("Click a button below to schedule a notification:")
                     Text("(clicking on a notification demonstrates how to handle a notification response)").italic().minimumScaleFactor(0.6)
@@ -83,7 +83,7 @@ struct MessagingView: View {
             }
         }
     }
-    }
+}
 
 //    func updateEcid() {
 //        Identity.getExperienceCloudId { (ecid, err) in
@@ -91,17 +91,17 @@ struct MessagingView: View {
 //            ecidState = ecid ?? ""
 //        }
 //    }
-    
-    // MARK: - Creation of local notifications for demonstrating notification click-throughs
-    
-    func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Simple notification"
-        content.body = "This notification does not have any custom actions."
-        // content.sound = UNNotificationSound.default
-        
-        /// the structure of `userInfo` is the same as you'd see with an actual push message.
-        /// the values are made up for demonstration purposes.
+
+// MARK: - Creation of local notifications for demonstrating notification click-throughs
+
+func scheduleNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Simple notification"
+    content.body = "This notification does not have any custom actions."
+    // content.sound = UNNotificationSound.default
+
+    /// the structure of `userInfo` is the same as you'd see with an actual push message.
+    /// the values are made up for demonstration purposes.
 //        content.userInfo = [
 //            "_xdm": [
 //                "cjm": [
@@ -118,66 +118,62 @@ struct MessagingView: View {
 //                ]
 //            ]
 //        ]
-        var dateComponents = DateComponents()
-        dateComponents.calendar = Calendar.current
+    var dateComponents = DateComponents()
+    dateComponents.calendar = Calendar.current
 
-        dateComponents.weekday = 5  // Tuesday
-        dateComponents.hour = 14    // 21:00 hours
-                   let trigger = UNCalendarNotificationTrigger(
-                 dateMatching: dateComponents, repeats: true)
+    dateComponents.weekday = 5 // Thurday
+    dateComponents.hour = 21 // 21:00 hours
+    let trigger = UNCalendarNotificationTrigger(
+        dateMatching: dateComponents, repeats: true)
 
-        
-        // let trigger = UNCalen(timeInterval: 0.5, repeats: false)
-        let identifier = "Simple local notification identifier"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.removeAllPendingNotificationRequests()
-        print("Call Sample Notifications")
-        notificationCenter.add(request) { (error) in
-            if error != nil {
-               print(error!)
-            }
-         }
-    }
-    
-    func scheduleNotificationWithCustomAction() {
-        let content = UNMutableNotificationContent()
-        content.title = "Custom actions notification"
-        content.body = "This notification has custom actions. Click and hold on the notification to show the custom action buttons."
-        content.categoryIdentifier = "MEETING_INVITATION"
-        
-        /// the structure of `userInfo` is the same as you'd see with an actual push message.
-        /// the values are made up for demonstration purposes.
-        content.userInfo = [
-            "_xdm": [
-                "cjm": [
-                    "_experience": [
-                        "customerJourneyManagement": [
-                            "messageExecution": [
-                                "messageExecutionID": "11111111-1111-1111-1111-111111111111",
-                                "messageID": "message-2",
-                                "journeyVersionID": "someJourneyVersionId",
-                                "journeyVersionInstanceId": "someJourneyVersionInstanceId"
-                            ]
+
+    // let trigger = UNCalen(timeInterval: 0.5, repeats: false)
+    let identifier = "Simple local notification identifier"
+    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+    let notificationCenter = UNUserNotificationCenter.current()
+    notificationCenter.removeAllPendingNotificationRequests()
+    print("Call Sample Notifications")
+    notificationCenter.add(request, withCompletionHandler: handleNotificationError(_:)) 
+}
+
+func scheduleNotificationWithCustomAction() {
+    let content = UNMutableNotificationContent()
+    content.title = "Custom actions notification"
+    content.body = "This notification has custom actions. Click and hold on the notification to show the custom action buttons."
+    content.categoryIdentifier = "MEETING_INVITATION"
+
+    /// the structure of `userInfo` is the same as you'd see with an actual push message.
+    /// the values are made up for demonstration purposes.
+    content.userInfo = [
+        "_xdm": [
+            "cjm": [
+                "_experience": [
+                    "customerJourneyManagement": [
+                        "messageExecution": [
+                            "messageExecutionID": "11111111-1111-1111-1111-111111111111",
+                            "messageID": "message-2",
+                            "journeyVersionID": "someJourneyVersionId",
+                            "journeyVersionInstanceId": "someJourneyVersionInstanceId"
                         ]
                     ]
                 ]
             ]
         ]
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-        let identifier = "Custom action local notification identifier"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        // Define the custom actions
-        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
-                                                title: "Accept",
-                                                options: UNNotificationActionOptions(rawValue: 0))
-        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
-                                                 title: "Decline",
-                                                 options: UNNotificationActionOptions(rawValue: 0))
-        
-        // Define the notification type
+    ]
+
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+    let identifier = "Custom action local notification identifier"
+    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+    // Define the custom actions
+    let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
+        title: "Accept",
+        options: UNNotificationActionOptions(rawValue: 0))
+    let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
+        title: "Decline",
+        options: UNNotificationActionOptions(rawValue: 0))
+
+    // Define the notification type
 //        let meetingInviteCategory = UNNotificationCategory(identifier: "MEETING_INVITATION",
 //                                                           actions: [acceptAction, declineAction],
 //                                                           intentIdentifiers: [],
@@ -188,13 +184,13 @@ struct MessagingView: View {
 //        let notificationCenter = UNUserNotificationCenter.current()
 //        notificationCenter.setNotificationCategories([meetingInviteCategory])
 //        notificationCenter.add(request, withCompletionHandler: handleNotificationError(_:))
+}
+
+func handleNotificationError(_ error: Error?) {
+    if let error = error {
+        print("An error occurred when adding a notification: \(error.localizedDescription)")
     }
-    
-    func handleNotificationError(_ error: Error?) {
-        if let error = error {
-            print("An error occurred when adding a notification: \(error.localizedDescription)")
-        }
-    }
+}
 
 
 struct MessaginView_Previews: PreviewProvider {
