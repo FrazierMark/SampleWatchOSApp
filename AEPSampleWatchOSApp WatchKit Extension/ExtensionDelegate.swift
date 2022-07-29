@@ -68,7 +68,6 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
         MobileCore.setPushIdentifier(deviceToken)
     }
     
-    
     func applicationDidEnterBackground() {
         print("applicationDidEnterBackground")
         MobileCore.lifecyclePause()

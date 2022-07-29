@@ -32,7 +32,7 @@ struct MessagingView: View {
             VStack(alignment: .leading, spacing: 12) {
                 Text("Current ECID:")
                 Button(action: {
-                    print("THis is called")
+                    print("This is called")
                     print(currentEcid)
                     Identity.getExperienceCloudId { ecid, error in
                         currentEcid = ecid ?? "Error"
@@ -41,27 +41,30 @@ struct MessagingView: View {
                     Text("Get ExperienceCloudId")
                 }.buttonStyle(CustomButtonStyle())
                 Text(currentEcid)
-                    .lineLimit(1)
+                    .lineLimit(2)
                     .minimumScaleFactor(0.5)
                 
                 
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Push Messaging").font(.title).bold()
+                    Text("Push Messaging")
                     Text("Messaging SDK setup is complete with ECID:")
                     Text(currentEcid)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                    
                     Spacer(minLength: 15)
                     Text("Click a button below to schedule a notification:")
-                    Text("(clicking on a notification demonstrates how to handle a notification response)").italic()
+                    Text("(clicking on a notification demonstrates how to handle a notification response)").italic().minimumScaleFactor(0.6)
                     Button("Sample notification") {
                         scheduleNotification()
                     }.buttonStyle(CustomButtonStyle())
                     Button("Sample notification with custom actions") {
                         scheduleNotificationWithCustomAction()
-                    }.buttonStyle(CustomButtonStyle())
+                    }.buttonStyle(CustomButtonStyle()).minimumScaleFactor(0.6)
                     Spacer(minLength: 15)
                 }
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("In-App Messaging (beta)").font(.title).bold()
+                    Text("In-App Messaging (beta)")
                     Text("Click a button below to trigger an in-app message:")
                     Button("Sample fullscreen message") {
                         MobileCore.track(action: "sampleAppFullscreen", data: nil)
@@ -95,7 +98,7 @@ struct MessagingView: View {
         let content = UNMutableNotificationContent()
         content.title = "Simple notification"
         content.body = "This notification does not have any custom actions."
-        content.sound = UNNotificationSound.default
+        // content.sound = UNNotificationSound.default
         
         /// the structure of `userInfo` is the same as you'd see with an actual push message.
         /// the values are made up for demonstration purposes.
@@ -115,14 +118,26 @@ struct MessagingView: View {
 //                ]
 //            ]
 //        ]
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+
+        dateComponents.weekday = 5  // Tuesday
+        dateComponents.hour = 14    // 21:00 hours
+                   let trigger = UNCalendarNotificationTrigger(
+                 dateMatching: dateComponents, repeats: true)
+
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
+        // let trigger = UNCalen(timeInterval: 0.5, repeats: false)
         let identifier = "Simple local notification identifier"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removeAllPendingNotificationRequests()
         print("Call Sample Notifications")
-        notificationCenter.add(request)
+        notificationCenter.add(request) { (error) in
+            if error != nil {
+               print(error!)
+            }
+         }
     }
     
     func scheduleNotificationWithCustomAction() {
