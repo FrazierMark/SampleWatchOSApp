@@ -19,7 +19,7 @@ struct EdgeIdentityView: View {
     @State var adIdText: String = ""
     @State var trackingAuthorizationResultText: String = ""
     @State var urlVariablesText: String = ""
-    
+
     // This either does not work with watchOS OR is just doesn't work with a simulator
     /// Updates view for ad ID related elements
     func setDeviceAdvertisingIdentifier() {
@@ -33,11 +33,11 @@ struct EdgeIdentityView: View {
 //            MobileCore.setAdvertisingIdentifier(self.adID?.uuidString)
 //        }
 //        else {
-            print("Ad tracking not authorized; setting ad ID to the empty string")
-            MobileCore.setAdvertisingIdentifier("")
-       // }
+        print("Ad tracking not authorized; setting ad ID to the empty string")
+        MobileCore.setAdvertisingIdentifier("")
+        // }
     }
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
@@ -45,12 +45,11 @@ struct EdgeIdentityView: View {
                 Button(action: {
                     Identity.getExperienceCloudId { ecid, error in
                         currentEcid = ecid ?? ""
-                    }
-                    
-                }) {
-                    
+                    } }) {
+
                     Text("Get ExperienceCloudId")
                 }.buttonStyle(CustomButtonStyle())
+
                 Text(currentEcid)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -61,20 +60,20 @@ struct EdgeIdentityView: View {
 //                            Text("Copy")
 //                            }
 //                    }
-                
+
                 Text("Current Identities:")
                 Button(action: {
                     Identity.getIdentities { identityMap, error in
                         currentIdentityMap = identityMap
                     }
-                    
+
                 }) {
                     Text("Get Identities")
                 }.buttonStyle(CustomButtonStyle())
-                
+
                 Text(currentIdentityMap?.jsonString ?? "")
                     .fixedSize(horizontal: false, vertical: true)
-                
+
                 Button(action: {
                     let updatedIdentities = IdentityMap()
                     updatedIdentities.add(item: IdentityItem(id: "test-id"), withNamespace: "test-namespace")
@@ -82,13 +81,13 @@ struct EdgeIdentityView: View {
                 }) {
                     Text("Update Identities with test-namespace")
                 }.buttonStyle(CustomButtonStyle())
-                
+
                 Button(action: {
                     Identity.removeIdentity(item: IdentityItem(id: "test-id"), withNamespace: "test-namespace")
                 }) {
                     Text("Remove Identities with test-namespace")
                 }.buttonStyle(CustomButtonStyle())
-                
+
                 VStack(alignment: .leading, spacing: 12) {
                     Text("Advertising Identifier:")
                     Button(action: {
@@ -98,7 +97,7 @@ struct EdgeIdentityView: View {
                     }.buttonStyle(CustomButtonStyle())
                     Text(trackingAuthorizationResultText)
                     Text("\(adID?.uuidString ?? "")")
-                    
+
                     HStack {
                         Button(action: {
                             MobileCore.setAdvertisingIdentifier(adIdText)
@@ -109,7 +108,7 @@ struct EdgeIdentityView: View {
                             .fixedSize()
                             .textInputAutocapitalization(.none)
                     }
-                    
+
                     HStack {
                         Button(action: {
                             MobileCore.setAdvertisingIdentifier(nil)
@@ -128,9 +127,9 @@ struct EdgeIdentityView: View {
                         }.buttonStyle(CustomButtonStyle())
                     }
                 }
-                
+
                 VStack(alignment: .leading, spacing: 12) {
-                    
+
                     Text("Get URLVariables:")
                     Button(action: {
                         self.urlVariablesText = ""
@@ -138,11 +137,11 @@ struct EdgeIdentityView: View {
                         AEPEdgeIdentity.Identity.getUrlVariables { urlVariablesString, _ in
                             self.urlVariablesText = urlVariablesString ?? "URLVariables not generated"
                         }
-                        
+
                     }) {
                         Text("Get URLVariables")
                     }.buttonStyle(CustomButtonStyle())
-                    
+
                     Text(urlVariablesText)
                 }
             }.padding()
@@ -161,7 +160,7 @@ extension IdentityMap {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         guard let data = try? encoder.encode(self) else { return nil }
-        
+
         return String(data: data, encoding: .utf8)
     }
 }

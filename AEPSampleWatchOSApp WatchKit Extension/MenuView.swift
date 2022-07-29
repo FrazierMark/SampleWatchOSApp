@@ -5,7 +5,6 @@
 //  Created by Mark Frazier on 7/20/22.
 //
 
-import SwiftUI
 
 //struct ContentView: View {
 //    var body: some View {
@@ -41,24 +40,24 @@ struct MenuView: View {
                     NavigationLink(destination: ConsentView().navigationBarTitle("Consent")) {
                         Text("Consent")
                     }
-
+                    
                     NavigationLink(destination: EdgeIdentityView().navigationBarTitle("Edge Identity")) {
                         Text("Edge Identity")
                     }
-                
-                    //
-                    //                Section(header: Text("Validation")) {
-                    //                    NavigationLink(destination: AssuranceView().navigationBarTitle("Assurance")) {
-                    //                        Text("Assurance")
-                    //                    }
-                    //                }
-                    //
-                    //                Section(header: Text("Messaging")) {
-                    //                    NavigationLink(destination: MessagingView().navigationBarTitle("Messaging")) {
-                    //                        Text("Messaging")
-                    //                    }
-                    //                }
-                    //
+                }
+                    
+//                    Section(header: Text("Validation")) {
+//                        NavigationLink(destination: AssuranceView().navigationBarTitle("Assurance")) {
+//                            Text("Assurance")
+//                        }
+//                 }
+    
+                    Section(header: Text("Messaging")) {
+                        NavigationLink(destination: MessagingView().navigationBarTitle("Messaging")) {
+                            Text("Messaging")
+                        }
+                    }
+    
                     //                Section(header: Text("Optimize")) {
                     //                    NavigationLink(destination: OptimizeView().navigationBarTitle("Optimize")) {
                     //                        Text("Optimize")
@@ -68,7 +67,6 @@ struct MenuView: View {
             }
         }
     }
-}
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {

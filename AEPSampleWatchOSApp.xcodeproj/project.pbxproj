@@ -37,11 +37,11 @@
 		67574DAA2890926700F847F0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D9A2890926700F847F0 /* Order.swift */; };
 		67574DAB2890926700F847F0 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D9B2890926700F847F0 /* Commerce.swift */; };
 		67574DAD2890AAC000F847F0 /* EdgeIdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */; };
-		67601B952890ABAF006E6BE6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D5F2890863F00F847F0 /* AdSupport.framework */; };
-		67601B962890ABB6006E6BE6 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */; };
 		6763FFC328919B9A004552A0 /* AEPServices in Frameworks */ = {isa = PBXBuildFile; productRef = 6763FFC228919B9A004552A0 /* AEPServices */; };
 		6763FFC528919BBE004552A0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 6763FFC428919BBE004552A0 /* AEPEdgeConsent */; };
 		6763FFD52891C357004552A0 /* AdIdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFD42891C2CB004552A0 /* AdIdUtils.swift */; };
+		6763FFD9289344A8004552A0 /* AssuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFD8289344A0004552A0 /* AssuranceView.swift */; };
+		6763FFDB2893462C004552A0 /* MessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFDA2893452F004552A0 /* MessagingView.swift */; };
 		677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		677EC7602888C52C008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC75F2888C52C008B97B1 /* Assets.xcassets */; };
 		677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677EC76A2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift */; };
@@ -51,7 +51,10 @@
 		677EC7732888C52C008B97B1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677EC7722888C52C008B97B1 /* ComplicationController.swift */; };
 		677EC7752888C52D008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC7742888C52D008B97B1 /* Assets.xcassets */; };
 		677EC7782888C52D008B97B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC7772888C52D008B97B1 /* Preview Assets.xcassets */; };
+		678F3E54289351CD00D2AD61 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E50289351C900D2AD61 /* UserNotifications.framework */; };
+		678F3E56289351D100D2AD61 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */; };
 		67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67FDC51E288B5B630097EADB /* AEPMessaging */; };
+		67FEC87128936D4800996F58 /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F3E58289369F400D2AD61 /* empty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +88,6 @@
 		67574D3D2890721C00F847F0 /* ConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentView.swift; sourceTree = "<group>"; };
 		67574D3E2890737C00F847F0 /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
 		67574D41289074D000F847F0 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		67574D5F2890863F00F847F0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		67574D842890909F00F847F0 /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
 		67574D8C2890926600F847F0 /* ProductListItemsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListItemsItem.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListItemsItem.swift"; sourceTree = SOURCE_ROOT; };
 		67574D8D2890926600F847F0 /* ProductListReopens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListReopens.swift; path = "AEPSampleWatchOSApp WatchKit Extension/xdmlib/ProductListReopens.swift"; sourceTree = SOURCE_ROOT; };
@@ -107,6 +108,8 @@
 		67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeIdentityView.swift; sourceTree = "<group>"; };
 		6763FFD42891C2CB004552A0 /* AdIdUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdIdUtils.swift; sourceTree = "<group>"; };
 		6763FFD6289343BF004552A0 /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
+		6763FFD8289344A0004552A0 /* AssuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuranceView.swift; sourceTree = "<group>"; };
+		6763FFDA2893452F004552A0 /* MessagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingView.swift; sourceTree = "<group>"; };
 		677EC7562888C52C008B97B1 /* AEPSampleWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPSampleWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AEPSampleWatchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EC75F2888C52C008B97B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +122,9 @@
 		677EC7772888C52D008B97B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		677EC7792888C52D008B97B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		678F3E50289351C900D2AD61 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
+		678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
+		678F3E58289369F400D2AD61 /* empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,8 @@
 				67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */,
 				67574D70289087A200F847F0 /* AEPLifecycle in Frameworks */,
 				67574D6E289087A200F847F0 /* AEPIdentity in Frameworks */,
+				678F3E56289351D100D2AD61 /* UserNotificationsUI.framework in Frameworks */,
+				678F3E54289351CD00D2AD61 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67601B952890ABAF006E6BE6 /* AdSupport.framework in Frameworks */,
-				67601B962890ABB6006E6BE6 /* AppTrackingTransparency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,11 +234,14 @@
 				671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */,
 				67574D3E2890737C00F847F0 /* CoreView.swift */,
 				67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */,
+				6763FFD8289344A0004552A0 /* AssuranceView.swift */,
+				6763FFDA2893452F004552A0 /* MessagingView.swift */,
 				6763FFD42891C2CB004552A0 /* AdIdUtils.swift */,
 				677EC7742888C52D008B97B1 /* Assets.xcassets */,
 				677EC7792888C52D008B97B1 /* Info.plist */,
 				677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */,
 				677EC7762888C52D008B97B1 /* Preview Content */,
+				678F3E58289369F400D2AD61 /* empty.swift */,
 			);
 			path = "AEPSampleWatchOSApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -248,8 +257,8 @@
 		67FDC50E288B2D360097EADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				67574D61289086AF00F847F0 /* AppTrackingTransparency.framework */,
-				67574D5F2890863F00F847F0 /* AdSupport.framework */,
+				678F3E50289351C900D2AD61 /* UserNotifications.framework */,
+				678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				677EC76D2888C52C008B97B1 /* MenuView.swift in Sources */,
 				67574DA22890926700F847F0 /* ProductListAdds.swift in Sources */,
 				671E07242889DE2700A9ABC6 /* ExtensionDelegate.swift in Sources */,
+				67FEC87128936D4800996F58 /* empty.swift in Sources */,
 				67574D9C2890926700F847F0 /* ProductListItemsItem.swift in Sources */,
 				67574DAB2890926700F847F0 /* Commerce.swift in Sources */,
 				677EC7732888C52C008B97B1 /* ComplicationController.swift in Sources */,
@@ -395,7 +405,9 @@
 				67574D9D2890926700F847F0 /* ProductListReopens.swift in Sources */,
 				67574DAD2890AAC000F847F0 /* EdgeIdentityView.swift in Sources */,
 				67574D852890909F00F847F0 /* EdgeView.swift in Sources */,
+				6763FFDB2893462C004552A0 /* MessagingView.swift in Sources */,
 				67574D9E2890926700F847F0 /* PaymentsItem.swift in Sources */,
+				6763FFD9289344A8004552A0 /* AssuranceView.swift in Sources */,
 				677EC7712888C52C008B97B1 /* NotificationView.swift in Sources */,
 				67574DA82890926700F847F0 /* Purchases.swift in Sources */,
 				67574D3F2890740A00F847F0 /* CoreView.swift in Sources */,
@@ -531,7 +543,6 @@
 		677EC7822888C52D008B97B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -567,7 +578,6 @@
 		677EC7832888C52D008B97B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
