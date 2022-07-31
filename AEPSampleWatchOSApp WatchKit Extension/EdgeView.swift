@@ -94,9 +94,10 @@ struct EdgeView: View {
                     .foregroundColor(.white)
                     .cornerRadius(5)
                 }
-            }
-            .alert(isPresented: $showAddToCartMessage) {
-                        Alert(title: Text("Add to cart"), message: Text("Your cart has been updated."), dismissButton: .default(Text("OK")))
+            }.alert(isPresented: $showAddToCartMessage) {
+                        Alert(title: Text("Add to cart"),
+                              message: Text("Your cart has been updated."),
+                              dismissButton: .default(Text("OK")))
                     }
             
             

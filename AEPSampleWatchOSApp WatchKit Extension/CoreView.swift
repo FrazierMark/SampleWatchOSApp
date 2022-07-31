@@ -74,7 +74,7 @@ struct CoreView: View {
 
     var privacySection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Change Privacy Status").bold()
+            Text("Change Privacy Status").font(.caption).bold()
             Button(action: {
                 // step-privacy-start
                 MobileCore.setPrivacyStatus(.optedIn)
