@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "AEPOptimize",
+        "repositoryURL": "https://github.com/FrazierMark/aepsdk-optimize-ios.git",
+        "state": {
+          "branch": "dev",
+          "revision": "08f9cec5447cc65b52d3ee6f9b0c93d2665b02c4",
+          "version": null
+        }
+      },
+      {
         "package": "AEPRulesEngine",
         "repositoryURL": "https://github.com/FrazierMark/aepsdk-rulesengine-ios.git",
         "state": {

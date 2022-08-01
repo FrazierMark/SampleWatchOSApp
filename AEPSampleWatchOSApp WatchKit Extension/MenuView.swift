@@ -57,12 +57,12 @@ struct MenuView: View {
                             Text("Messaging")
                         }
                     }
-    
-                    //                Section(header: Text("Optimize")) {
-                    //                    NavigationLink(destination: OptimizeView().navigationBarTitle("Optimize")) {
-                    //                        Text("Optimize")
-                    //                    }
-                    //                }
+
+                    Section(header: Text("Optimize")) {
+                        NavigationLink(destination: OptimizeView().navigationBarTitle("Optimize")) {
+                            Text("Optimize")
+                        }
+                    }
                 }.navigationBarTitle(Text("Extensions"))
             }
         }
