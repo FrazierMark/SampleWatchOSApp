@@ -17,7 +17,6 @@ import AEPCore
 struct EdgeView: View {
     /// Index of the product selected from the Picker. Index can be used to retrieve the `ProductItem` from the `products` array.
     @State private var productIndex = 0
-    
     @State private var showAddToCartMessage = false
     @State private var showPurchaseMessage = false
     @State private var showProductReviewMessage = false
@@ -76,8 +75,7 @@ struct EdgeView: View {
     /// UI elements for the commerce example
     var commerceExampleSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("XDM Commerce Example").bold()
-            
+            Text("XDM Commerce Example")
             HStack {
                 Button(action: {
                     self.sendAddToCartXDMEvent()
@@ -99,8 +97,6 @@ struct EdgeView: View {
                               message: Text("Your cart has been updated."),
                               dismissButton: .default(Text("OK")))
                     }
-            
-            
             HStack {
                 Button(action: {
                     self.sendPurchaseXDMEvent()
