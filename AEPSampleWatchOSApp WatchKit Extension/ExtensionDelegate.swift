@@ -13,6 +13,7 @@ import UserNotifications
 // import AEPAssurance
 import AEPCore
 import AEPEdge
+import AEPIdentity
 import AEPEdgeIdentity
 import AEPMessaging
 import AEPLifecycle
@@ -31,7 +32,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
       
 
       
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self, AEPEdgeIdentity.Identity.self, Messaging.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self,AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, UserProfile.self, Messaging.self]
 
       MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {
