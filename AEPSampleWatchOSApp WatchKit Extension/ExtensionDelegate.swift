@@ -1,5 +1,3 @@
-
-//
 //  ExtensionDelegate.swift
 //  AEPSampleWatchOSApp WatchKit Extension
 //
@@ -23,16 +21,12 @@ import AEPServices
 import AEPEdgeConsent
 
 
-
 /// Entry point of the watch app.
 final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
     
-        
   func applicationDidFinishLaunching() {
       
-
-      
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self,AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, UserProfile.self, Messaging.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self, AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, UserProfile.self, Messaging.self]
 
       MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {
@@ -40,15 +34,12 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
           MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox" : true])
           print("Registered Extension!!")
           MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
-          
       })
-
       
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
       if granted {
           print("Permission Granted")
-          
           
           WKExtension.shared().registerForRemoteNotifications()
           print(WKExtension.shared().isRegisteredForRemoteNotifications)

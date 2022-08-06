@@ -145,7 +145,6 @@ struct EdgeIdentityView: View {
                     }) {
                         Text("Get URLVariables")
                     }.buttonStyle(CustomButtonStyle())
-
                     Text(urlVariablesText)
                 }
             }.padding()

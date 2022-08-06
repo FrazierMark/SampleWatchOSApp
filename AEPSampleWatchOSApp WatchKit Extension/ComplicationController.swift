@@ -17,7 +17,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             CLKComplicationDescriptor(identifier: "complication", displayName: "AEPSampleWatchOSApp", supportedFamilies: CLKComplicationFamily.allCases)
             // Multiple complication support can be added here with more descriptors
         ]
-        
         // Call the handler with the currently supported complication descriptors
         handler(descriptors)
     }

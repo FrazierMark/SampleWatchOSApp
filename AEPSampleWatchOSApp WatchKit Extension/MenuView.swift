@@ -5,8 +5,6 @@
 //  Created by Mark Frazier on 7/20/22.
 //
 
-
-
 import SwiftUI
 
 struct MenuView: View {

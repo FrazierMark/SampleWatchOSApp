@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import AEPCore
 import AEPEdgeConsent
 import SwiftUI
