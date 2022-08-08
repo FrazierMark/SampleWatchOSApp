@@ -8,7 +8,6 @@ import Foundation
 import WatchKit
 import UserNotifications
 
-// import AEPAssurance
 import AEPCore
 import AEPEdge
 import AEPIdentity
@@ -19,6 +18,10 @@ import AEPUserProfile
 import AEPSignal
 import AEPServices
 import AEPEdgeConsent
+
+// import AEPAssurance
+// import AEPOptimize
+
 
 
 /// Entry point of the watch app.
