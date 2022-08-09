@@ -6,32 +6,19 @@
 //
 
 
-//struct ContentView: View {
-//    var body: some View {
-//        Text("Hello, World!")
-//            .padding()
-//    }
-//}
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-
 
 import SwiftUI
 
 struct MenuView: View {
     var body: some View {
         NavigationView {
-            Form {
+            List {
                 Section(header: Text("Core")) {
                     NavigationLink(destination: CoreView().navigationBarTitle("Core")) {
                         Text("Core")
                     }
-                }
-                
+                }.listRowBackground(Color.red)
+                                
                 Section(header: Text("Edge")) {
                     NavigationLink(destination: EdgeView().navigationBarTitle("Edge")) {
                         Text("Edge")
@@ -44,25 +31,25 @@ struct MenuView: View {
                     NavigationLink(destination: EdgeIdentityView().navigationBarTitle("Edge Identity")) {
                         Text("Edge Identity")
                     }
-                }
+                }.listRowBackground(Color.red)
                     
-//                    Section(header: Text("Validation")) {
-//                        NavigationLink(destination: AssuranceView().navigationBarTitle("Assurance")) {
-//                            Text("Assurance")
-//                        }
-//                 }
+                    Section(header: Text("Validation")) {
+                        NavigationLink(destination: AssuranceView().navigationBarTitle("Assurance")) {
+                            Text("Assurance")
+                        }
+                    }.listRowBackground(Color.red)
     
                     Section(header: Text("Messaging")) {
                         NavigationLink(destination: MessagingView().navigationBarTitle("Messaging")) {
                             Text("Messaging")
                         }
-                    }
+                    }.listRowBackground(Color.red)
 
                     Section(header: Text("Optimize")) {
                         NavigationLink(destination: OptimizeView().navigationBarTitle("Optimize")) {
                             Text("Optimize")
                         }
-                    }
+                    }.listRowBackground(Color.red)
                 }.navigationBarTitle(Text("Extensions"))
             }
         }

@@ -8,15 +8,15 @@
  */
 
 
-///error build: AdSupport is not available when building for watchOS Simulator. Consider using `#if canImport(AdSupport)` to conditionally import this framework.
-
-//
+//error build: AdSupport is not available when building for watchOS Simulator. Consider using `#if canImport(AdSupport)` to conditionally import this framework.
 //import AdSupport
 //import AppTrackingTransparency
+//
+//
 //import Foundation
 //
 //class AdIdUtils {
-//    
+//
 //    /// Provides the `advertisingIdentifier` for the given environment, assuming tracking authorization is provided.
 //    /// Use ``requestTrackingAuthorization(callbackHandler:)`` to request authorization.
 //    ///
@@ -35,7 +35,7 @@
 //        print("Advertising identifier: \(ASIdentifierManager.shared().advertisingIdentifier)")
 //        return ASIdentifierManager.shared().advertisingIdentifier
 //    }
-//    
+//
 //    /// Checks if ad ID tracking authorization is provided, if not returns `false`. Handles both iOS 14+ and iOS < 14,
 //    /// using the appropriate APIs for each case
 //    ///
@@ -50,7 +50,7 @@
 //            return ASIdentifierManager.shared().isAdvertisingTrackingEnabled
 //        }
 //    }
-//    
+//
 //    /// Requests tracking authorization from the user; prompt will only be shown once per app install, as per Apple rules
 //    ///
 //    /// - Parameters:

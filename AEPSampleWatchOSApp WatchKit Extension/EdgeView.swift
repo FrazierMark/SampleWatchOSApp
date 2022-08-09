@@ -22,7 +22,7 @@ struct EdgeView: View {
     @State private var showProductReviewMessage = false
     
     /// Product review string
-    @State private var reviewText: String = "Great Product"
+    @State private var reviewText: String = "Great Product!!"
     
     /// Email address as string,  used as the product reviewer identifier
     @State private var reviewerEmail: String = "TEST@TEST.com"
@@ -59,22 +59,21 @@ struct EdgeView: View {
     
     /// UI picker to select a product item
     var productSelectionSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 11) {
             Text("Select a Product").bold()
             Picker(selection: $productIndex, label: Text("Select product.")) {
-                ForEach(0..<products.count) {
+                ForEach(0..<products.count, id: \.self) {
                     Text(self.products[$0].name).font(.headline)
                 }
             }
             .labelsHidden()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, idealHeight: 50, maxHeight: 100, alignment: .center)
-            .clipped()
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 80, alignment: .center)
         }
     }
     
     /// UI elements for the commerce example
     var commerceExampleSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 11) {
             Text("XDM Commerce Example")
             HStack {
                 Button(action: {
@@ -123,7 +122,7 @@ struct EdgeView: View {
     
     /// UI elements for the product review example
     var reviewExampleSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 11) {
             Text("XDM Product Review Example").bold()
             
             TextField("Reviewer email", text: $reviewerEmail)
@@ -140,8 +139,7 @@ struct EdgeView: View {
                     Text("Fantastic!").tag(5).font(.headline)
                 }
                 .labelsHidden()
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, idealHeight: 50, maxHeight: 100, alignment: .center)
-                .clipped()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 80, alignment: .center)
             }
                         
             TextField("Write review here.", text: $reviewText)
@@ -311,4 +309,5 @@ struct ProductItem {
     let price: Double
     let currencyCode: String
 }
+
 
