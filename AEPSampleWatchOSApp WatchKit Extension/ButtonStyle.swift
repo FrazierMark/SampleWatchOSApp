@@ -17,7 +17,7 @@ public struct CustomButtonStyle: ButtonStyle {
         return configuration.label
             .frame(minWidth: 0, maxWidth: .infinity)
             .padding()
-            .background(Color.gray)
+            .background(Color.red)
             .foregroundColor(.white)
             .opacity(configuration.isPressed ? 0.7 : 1)
             .font(.caption)

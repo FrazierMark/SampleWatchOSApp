@@ -32,7 +32,7 @@ struct AssuranceView: View {
                     Text("Connect")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
-                        .background(Color.gray)
+                        .background(Color.red)
                         .foregroundColor(.white)
                         .font(.caption)
                 }.cornerRadius(5)

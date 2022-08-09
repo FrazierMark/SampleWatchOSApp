@@ -34,7 +34,6 @@
 		67574DAB2890926700F847F0 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574D9B2890926700F847F0 /* Commerce.swift */; };
 		67574DAD2890AAC000F847F0 /* EdgeIdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */; };
 		6763FFC528919BBE004552A0 /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 6763FFC428919BBE004552A0 /* AEPEdgeConsent */; };
-		6763FFD52891C357004552A0 /* AdIdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFD42891C2CB004552A0 /* AdIdUtils.swift */; };
 		6763FFDB2893462C004552A0 /* MessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFDA2893452F004552A0 /* MessagingView.swift */; };
 		677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 677EC75A2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		677EC7602888C52C008B97B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677EC75F2888C52C008B97B1 /* Assets.xcassets */; };
@@ -55,6 +54,11 @@
 		678F3E54289351CD00D2AD61 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E50289351C900D2AD61 /* UserNotifications.framework */; };
 		678F3E56289351D100D2AD61 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */; };
 		67C3D8F428A2AFB200F069FF /* AssuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */; };
+		67C3D8F528A302D800F069FF /* AdIdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763FFD42891C2CB004552A0 /* AdIdUtils.swift */; };
+		67C3D8F828A308E800F069FF /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */; };
+		67C3D8F928A308E800F069FF /* AppTrackingTransparency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67C3D8FD28A308F500F069FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8FB28A308F100F069FF /* AdSupport.framework */; };
+		67C3D8FE28A308F500F069FF /* AdSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8FB28A308F100F069FF /* AdSupport.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67FDC51E288B5B630097EADB /* AEPMessaging */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +82,18 @@
 				677EC75B2888C52C008B97B1 /* AEPSampleWatchOSApp WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C3D8FA28A308E800F069FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67C3D8F928A308E800F069FF /* AppTrackingTransparency.framework in Embed Frameworks */,
+				67C3D8FE28A308F500F069FF /* AdSupport.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -125,6 +141,8 @@
 		678F3E50289351C900D2AD61 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
 		678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
 		67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuranceView.swift; sourceTree = "<group>"; };
+		67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		67C3D8FB28A308F100F069FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C3D8F828A308E800F069FF /* AppTrackingTransparency.framework in Frameworks */,
+				67C3D8FD28A308F500F069FF /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,12 +252,12 @@
 				67574D842890909F00F847F0 /* EdgeView.swift */,
 				67574D41289074D000F847F0 /* ButtonStyle.swift */,
 				671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */,
+				6763FFD42891C2CB004552A0 /* AdIdUtils.swift */,
 				67574D3E2890737C00F847F0 /* CoreView.swift */,
 				67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */,
 				678C050328985F0B00C14D26 /* OptimizeView.swift */,
 				67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */,
 				6763FFDA2893452F004552A0 /* MessagingView.swift */,
-				6763FFD42891C2CB004552A0 /* AdIdUtils.swift */,
 				677EC7742888C52D008B97B1 /* Assets.xcassets */,
 				677EC7792888C52D008B97B1 /* Info.plist */,
 				677EC77A2888C52D008B97B1 /* PushNotificationPayload.apns */,
@@ -257,6 +277,8 @@
 		67FDC50E288B2D360097EADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67C3D8FB28A308F100F069FF /* AdSupport.framework */,
+				67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */,
 				678F3E50289351C900D2AD61 /* UserNotifications.framework */,
 				678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */,
 			);
@@ -273,6 +295,7 @@
 				677EC7542888C52C008B97B1 /* Resources */,
 				677EC7842888C52D008B97B1 /* Embed Watch Content */,
 				8D2A8C9132DB1D7B179EE651 /* Frameworks */,
+				67C3D8FA28A308E800F069FF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,7 +423,6 @@
 				677EC7732888C52C008B97B1 /* ComplicationController.swift in Sources */,
 				678C050428985F7000C14D26 /* OptimizeView.swift in Sources */,
 				677EC76B2888C52C008B97B1 /* AEPSampleWatchOSAppApp.swift in Sources */,
-				6763FFD52891C357004552A0 /* AdIdUtils.swift in Sources */,
 				67574DAA2890926700F847F0 /* Order.swift in Sources */,
 				67574DA42890926700F847F0 /* ProductListViews.swift in Sources */,
 				67574D42289074D000F847F0 /* ButtonStyle.swift in Sources */,
@@ -414,6 +436,7 @@
 				67574DA82890926700F847F0 /* Purchases.swift in Sources */,
 				67574D3F2890740A00F847F0 /* CoreView.swift in Sources */,
 				67574DA92890926700F847F0 /* CartAbandons.swift in Sources */,
+				67C3D8F528A302D800F069FF /* AdIdUtils.swift in Sources */,
 				67574DA12890926700F847F0 /* InStorePurchase.swift in Sources */,
 				67574DA52890926700F847F0 /* SaveForLaters.swift in Sources */,
 			);
