@@ -99,7 +99,7 @@ struct CoreView: View {
                 Text("Unknown")
             }.buttonStyle(CustomButtonStyle())
             
-            HStack {
+            VStack {
                 Button(action: {
                     // step-privacy-start
                     MobileCore.getPrivacyStatus { privacyStatus in

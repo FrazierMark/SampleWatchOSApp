@@ -54,6 +54,7 @@
 		678C052C28989FC600C14D26 /* AEPSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 678C052B28989FC600C14D26 /* AEPSignal */; };
 		678F3E54289351CD00D2AD61 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E50289351C900D2AD61 /* UserNotifications.framework */; };
 		678F3E56289351D100D2AD61 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */; };
+		67C3D8F428A2AFB200F069FF /* AssuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */; };
 		67FDC51F288B5B630097EADB /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 67FDC51E288B5B630097EADB /* AEPMessaging */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		678C050328985F0B00C14D26 /* OptimizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizeView.swift; sourceTree = "<group>"; };
 		678F3E50289351C900D2AD61 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
 		678F3E51289351C900D2AD61 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
+		67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuranceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				67574D41289074D000F847F0 /* ButtonStyle.swift */,
 				671E07232889DE2700A9ABC6 /* ExtensionDelegate.swift */,
 				67574D3E2890737C00F847F0 /* CoreView.swift */,
+				67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */,
 				678C050328985F0B00C14D26 /* OptimizeView.swift */,
 				67574DAC2890AAC000F847F0 /* EdgeIdentityView.swift */,
 				6763FFDA2893452F004552A0 /* MessagingView.swift */,
@@ -387,6 +390,7 @@
 				677EC76F2888C52C008B97B1 /* NotificationController.swift in Sources */,
 				67574DA72890926700F847F0 /* ProductListOpens.swift in Sources */,
 				67574D402890747700F847F0 /* ConsentView.swift in Sources */,
+				67C3D8F428A2AFB200F069FF /* AssuranceView.swift in Sources */,
 				67574DA32890926700F847F0 /* ProductListRemovals.swift in Sources */,
 				677EC76D2888C52C008B97B1 /* MenuView.swift in Sources */,
 				67574DA22890926700F847F0 /* ProductListAdds.swift in Sources */,

@@ -62,6 +62,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     
     func didRegisterForRemoteNotifications(withDeviceToken deviceToken: Data) {
         print("did Register for Remote Notifications called!!")
+        print(deviceToken)
         print(deviceToken.reduce("") { $0 + String(format: "%02x",
                                                    $1) })
         // Send push token to experience platform
