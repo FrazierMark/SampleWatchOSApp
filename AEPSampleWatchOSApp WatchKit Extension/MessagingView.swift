@@ -17,6 +17,7 @@ import AEPServices
 
 struct MessagingView: View {
     @State var currentEcid: String = ""
+    @State private var ecidState:String = ""
     @State var currentIdentityMap: IdentityMap?
 
     let LOG_PREFIX = "MessagingViewController"
@@ -85,6 +86,7 @@ struct MessagingView: View {
     }
 }
 
+// Calling this directly above....
 //    func updateEcid() {
 //        Identity.getExperienceCloudId { (ecid, err) in
 //            if ecid == nil {return}
@@ -98,36 +100,36 @@ func scheduleNotification() {
     let content = UNMutableNotificationContent()
     content.title = "Simple notification"
     content.body = "This notification does not have any custom actions."
-    // content.sound = UNNotificationSound.default
+    content.sound = UNNotificationSound.default
 
     /// the structure of `userInfo` is the same as you'd see with an actual push message.
     /// the values are made up for demonstration purposes.
-//        content.userInfo = [
-//            "_xdm": [
-//                "cjm": [
-//                    "_experience": [
-//                        "customerJourneyManagement": [
-//                            "messageExecution": [
-//                                "messageExecutionID": "00000000-0000-0000-0000-000000000000",
-//                                "messageID": "message-1",
-//                                "journeyVersionID": "someJourneyVersionId",
-//                                "journeyVersionInstanceId": "someJourneyVersionInstanceId"
-//                            ]
-//                        ]
-//                    ]
-//                ]
-//            ]
-//        ]
+        content.userInfo = [
+            "_xdm": [
+                "cjm": [
+                    "_experience": [
+                        "customerJourneyManagement": [
+                            "messageExecution": [
+                                "messageExecutionID": "00000000-0000-0000-0000-000000000000",
+                                "messageID": "message-1",
+                                "journeyVersionID": "someJourneyVersionId",
+                                "journeyVersionInstanceId": "someJourneyVersionInstanceId"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
     var dateComponents = DateComponents()
     dateComponents.calendar = Calendar.current
 
     dateComponents.weekday = 5 // Thurday
     dateComponents.hour = 21 // 21:00 hours
-    let trigger = UNCalendarNotificationTrigger(
-        dateMatching: dateComponents, repeats: true)
+//    let trigger = UNCalendarNotificationTrigger(
+//        dateMatching: dateComponents, repeats: true)
 
 
-    // let trigger = UNCalen(timeInterval: 0.5, repeats: false)
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
     let identifier = "Simple local notification identifier"
     let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
     let notificationCenter = UNUserNotificationCenter.current()
