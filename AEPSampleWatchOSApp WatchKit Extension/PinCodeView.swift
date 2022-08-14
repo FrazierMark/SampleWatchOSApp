@@ -25,6 +25,9 @@ struct PinCodeView_Previews: PreviewProvider {
 }
 
 struct Home: View {
+    
+    @State var unLocked = false
+    
     var body: some View{
         
         ZStack {
@@ -41,6 +44,9 @@ struct Home: View {
 struct LockScreen: View {
     
     @State var password = ""
+    @AppStorage("lock_Password") var key = "1234"
+    @Binding var unLocked: Bool
+    @State var wrongPassword = false
 
     
     var body: some View {
@@ -93,7 +99,24 @@ struct LockScreen: View {
             }
             .padding(.top, 5)
             
+            // KeyPad
+
             Spacer(minLength: 0)
+
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 5){
+                //Password Button
+                
+                ForEach(1...9, id: \.self){value in
+                    
+                    PasswordButton(value: "\(value)", password: $password, key: $key)
+                }
+                
+                PasswordButton(value: "delete.fill", password: $password, key: $key)
+                
+                PasswordButton(value: "0", password: $password, key: $key)
+            
+            }.padding(.bottom)
+          
         }
         .navigationTitle("")
         .navigationBarHidden(true)
@@ -118,13 +141,62 @@ struct PasswordView: View {
             if password.count > index{
                 
                 Circle()
-                    .fill(Color.white)                    .frame(width: 4, height: 4)
-
-                
+                    .fill(Color.white)
+                    .frame(width: 4, height: 4)
             }
-            
         }
+    }
+}
+
+struct PasswordButton: View {
+    var value: String
+    
+    @Binding var password: String
+    @Binding var key: String
+    var body: some View{
+        
+        Button(action: setPassword, label: {
+            
+            VStack{
+                
+                if value.count > 1{
+                    //Image...
+                    
+                    Image(systemName: "delete.left")
+                        .font(.system(size: 12))
+                        .foregroundColor(.white)
+                    
+                } else {
+                    Text(value)
+                        .font(.title3)
+                        .foregroundColor(.white)
+                }
+            }.padding()
+            
+      
+            
+        })
         
         
     }
+    
+    func setPassword(){
+        // Check if backspace is pressed
+        
+        if value.count > 1 {
+            
+            if password.count != 0 {
+                password.append(value)
+                
+            }
+            
+        } else {
+            
+            if password.count != 4 {
+                password.append(value)
+            }
+        }
+        
+    }
+    
 }
