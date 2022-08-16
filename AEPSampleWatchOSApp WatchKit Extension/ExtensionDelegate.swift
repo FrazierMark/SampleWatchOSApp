@@ -18,8 +18,7 @@ import AEPUserProfile
 import AEPSignal
 import AEPServices
 import AEPEdgeConsent
-
-// import AEPAssurance
+import AEPAssurance
 // import AEPOptimize
 
 
@@ -29,7 +28,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     
   func applicationDidFinishLaunching() {
       
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, Signal.self, AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, UserProfile.self, Messaging.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, UserProfile.self,  Messaging.self, Assurance.self]
 
       MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {

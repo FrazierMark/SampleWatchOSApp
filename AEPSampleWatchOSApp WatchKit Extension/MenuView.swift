@@ -49,6 +49,11 @@ struct MenuView: View {
                         }
                     }.listRowBackground(Color.red)
                 }.navigationBarTitle(Text("Extensions"))
+            Section(header: Text("PinCode")) {
+                NavigationLink(destination: PinCodeView().navigationBarTitle("PinCode")) {
+                    Text("PinCode")
+                }
+            }.listRowBackground(Color.red)
             }
         }
     }
