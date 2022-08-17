@@ -32,10 +32,16 @@ struct Home: View {
         
         ZStack {
             // LockScreen
-            
-            LockScreen(unLocked: $unLocked)
-                .preferredColorScheme(.dark)
+            if unLocked{
+                Text("Assurance Connected")
+                    .font(.title3)
+                    .fontWeight(.medium)
+            } else {
+                
+                LockScreen(unLocked: $unLocked)
+            }
         }
+        .preferredColorScheme(unLocked ? .light : .dark)
     }
 }
 
@@ -47,185 +53,189 @@ struct LockScreen: View {
     @AppStorage("lock_Password") var key = "1234"
     @Binding var unLocked: Bool
     @State var wrongPassword = false
-
+    let height = WKInterfaceDevice.current().screenBounds.width
+    
     
     var body: some View {
         
-                
+        
         VStack{
             HStack{
                 Spacer(minLength: 0)
-                Menu(content: {
-                    
-                    Label(title: {Text("Help")},
-                          icon: { Image(systemName: "info.circle.fill")})
-                    .onTapGesture(perform: {
-                        //Perform Actions
-                    })
-                    
-                    Label(title: {Text("Reset Password")},
-                          icon: {Image(systemName: "info.fill") })
-                    .onTapGesture(perform: {
-                        //Perform Actions
-                    })
-                    
-                }) {
-                    Image("menu")
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 19, height: 19)
-                        .foregroundColor(.white)
-                        .padding()
-                }
-            }.padding(.leading)
-            
-            Image("logo")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding(.top, 5)
-            
-            Text("Enter Pin to Connect to Assurance")
-                .font(.title3)
-                .fontWeight(.medium)
-                .padding(.top, 4)
-            
-            HStack(spacing: 22){
-                // Passord CVircle view
+                //                Menu(content: {
+                //
+                //                    Label(title: {Text("Help")},
+                //                          icon: { Image(systemName: "info.circle.fill")})
+                //                    .onTapGesture(perform: {
+                //                        //Perform Actions
+                //                    })
+                //
+                //                    Label(title: {Text("Reset Password")},
+                //                          icon: {Image(systemName: "info.fill") })
+                //                    .onTapGesture(perform: {
+                //                        //Perform Actions
+                //                    })
+                //
+                //                }) {
+                //                    Image("menu")
+                //                        .renderingMode(.template)
+                //                        .resizable()
+                //                        .frame(width: 19, height: 19)
+                //                        .foregroundColor(.white)
+                //                        .padding()
+                //                }
+                //            }.padding(.leading)
                 
-                ForEach(0..<4, id: \.self){index in
-                    PasswordView(index: index, password: $password)
+                Image("logo")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .padding(.top, 5)
+                
+                Text("Enter Pin to Connect to Assurance")
+                    .font(.title3)
+                    .fontWeight(.medium)
+                    .padding(.top, 4)
+                
+                HStack(spacing: 22){
+                    // Passord CVircle view
+                    
+                    ForEach(0..<4, id: \.self){index in
+                        PasswordView(index: index, password: $password)
+                    }
+                    
                 }
+                // .padding(.top, height < 450 ? 10 : 20)
+                .padding(.top)
+                
+                // KeyPad
+                
+                Spacer(minLength: 0)
+                
+                Text(wrongPassword ? "Incorrect Pin" : "")
+                    .foregroundColor(.red)
+                    .fontWeight(.heavy)
+                
+                Spacer(minLength: 0)
+                
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 5){
+                    //Password Button
+                    
+                    ForEach(1...9, id: \.self){value in
+                        
+                        PasswordButton(value: "\(value)", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                    }
+                    
+                    PasswordButton(value: "delete.fill", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                    
+                    PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                    
+                }.padding(.bottom)
                 
             }
-            .padding(.top, 5)
-            
-            // KeyPad
-            
-            Spacer(minLength: 0)
-            
-            Text(wrongPassword ? "Incorrect Pin" : "")
-                .foregroundColor(.red)
-                .fontWeight(.heavy)
-
-            Spacer(minLength: 0)
-
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 5){
-                //Password Button
-                
-                ForEach(1...9, id: \.self){value in
-                    
-                    PasswordButton(value: "\(value)", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-                }
-                
-                PasswordButton(value: "delete.fill", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-                
-                PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-            
-            }.padding(.bottom)
-          
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
     }
-}
-
-
-struct PasswordView: View {
-    var index: Int
-    @Binding var password: String
     
-    var body: some View {
+    
+    struct PasswordView: View {
+        var index: Int
+        @Binding var password: String
         
-        ZStack {
+        var body: some View {
             
-            Circle()
-                .stroke(Color.white, lineWidth: 1)
-                .frame(width: 4, height: 4)
-            
-            //checking whether it is typed
-            
-            if password.count > index{
+            ZStack {
                 
                 Circle()
-                    .fill(Color.white)
+                    .stroke(Color.white, lineWidth: 1)
                     .frame(width: 4, height: 4)
+                
+                //checking whether it is typed
+                
+                if password.count > index{
+                    
+                    Circle()
+                        .fill(Color.white)
+                        .frame(width: 4, height: 4)
+                }
             }
         }
     }
-}
-
-struct PasswordButton: View {
-    var value: String
     
-    @Binding var password: String
-    @Binding var key: String
-    @Binding var unlocked: Bool
-    @Binding var wrongPass: Bool
-    
-    
-    var body: some View{
+    struct PasswordButton: View {
+        var value: String
         
-        Button(action: setPassword, label: {
+        @Binding var password: String
+        @Binding var key: String
+        @Binding var unlocked: Bool
+        @Binding var wrongPass: Bool
+        
+        
+        var body: some View{
             
-            VStack{
+            Button(action: setPassword, label: {
                 
-                if value.count > 1{
-                    //Image...
+                VStack{
                     
-                    Image(systemName: "delete.left")
-                        .font(.system(size: 12))
-                        .foregroundColor(.white)
+                    if value.count > 1{
+                        //Image...
+                        
+                        Image(systemName: "delete.left")
+                            .font(.system(size: 12))
+                            .foregroundColor(.white)
+                        
+                    } else {
+                        Text(value)
+                            .font(.title3)
+                            .foregroundColor(.white)
+                    }
+                }.padding()
+                
+                
+                
+            })
+            
+            
+        }
+        
+        func setPassword(){
+            // Check if backspace is pressed
+            
+            withAnimation{
+                if value.count > 1 {
+                    
+                    if password.count != 0 {
+                        password.append(value)
+                        
+                    }
                     
                 } else {
-                    Text(value)
-                        .font(.title3)
-                        .foregroundColor(.white)
-                }
-            }.padding()
-            
-      
-            
-        })
-        
-        
-    }
-    
-    func setPassword(){
-        // Check if backspace is pressed
-        
-        withAnimation{
-            if value.count > 1 {
-                
-                if password.count != 0 {
-                    password.append(value)
                     
-                }
-                
-            } else {
-                
-                if password.count != 4 {
-                    password.append(value)
-
-                    
-                    // Delay Animation....
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        withAnimation{
-                            if password.count == 4 {
-                                if password == key {
-                                    unlocked.toggle()
-                                } else {
-                                    wrongPass = true
+                    if password.count != 4 {
+                        password.append(value)
+                        
+                        
+                        // Delay Animation....
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation{
+                                if password.count == 4 {
+                                    if password == key {
+                                        unlocked.toggle()
+                                    } else {
+                                        wrongPass = true
+                                        password.removeAll()
+                                    }
                                 }
                             }
                         }
+                        
+                        
                     }
-                    
-                    
                 }
             }
+            
         }
         
     }
-    
 }
