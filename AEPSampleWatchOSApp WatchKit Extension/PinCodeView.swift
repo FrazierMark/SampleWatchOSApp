@@ -33,7 +33,7 @@ struct Home: View {
         ZStack {
             // LockScreen
             
-            LockScreen()
+            LockScreen(unLocked: $unLocked)
                 .preferredColorScheme(.dark)
         }
     }
@@ -100,6 +100,12 @@ struct LockScreen: View {
             .padding(.top, 5)
             
             // KeyPad
+            
+            Spacer(minLength: 0)
+            
+            Text(wrongPassword ? "Incorrect Pin" : "")
+                .foregroundColor(.red)
+                .fontWeight(.heavy)
 
             Spacer(minLength: 0)
 
@@ -108,12 +114,12 @@ struct LockScreen: View {
                 
                 ForEach(1...9, id: \.self){value in
                     
-                    PasswordButton(value: "\(value)", password: $password, key: $key)
+                    PasswordButton(value: "\(value)", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                 }
                 
-                PasswordButton(value: "delete.fill", password: $password, key: $key)
+                PasswordButton(value: "delete.fill", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                 
-                PasswordButton(value: "0", password: $password, key: $key)
+                PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
             
             }.padding(.bottom)
           
@@ -153,6 +159,10 @@ struct PasswordButton: View {
     
     @Binding var password: String
     @Binding var key: String
+    @Binding var unlocked: Bool
+    @Binding var wrongPass: Bool
+    
+    
     var body: some View{
         
         Button(action: setPassword, label: {
@@ -183,17 +193,36 @@ struct PasswordButton: View {
     func setPassword(){
         // Check if backspace is pressed
         
-        if value.count > 1 {
-            
-            if password.count != 0 {
-                password.append(value)
+        withAnimation{
+            if value.count > 1 {
                 
-            }
-            
-        } else {
-            
-            if password.count != 4 {
-                password.append(value)
+                if password.count != 0 {
+                    password.append(value)
+                    
+                }
+                
+            } else {
+                
+                if password.count != 4 {
+                    password.append(value)
+
+                    
+                    // Delay Animation....
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation{
+                            if password.count == 4 {
+                                if password == key {
+                                    unlocked.toggle()
+                                } else {
+                                    wrongPass = true
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
             }
         }
         
