@@ -48,12 +48,15 @@ struct MenuView: View {
                             Text("Optimize")
                         }
                     }.listRowBackground(Color.red)
+                
+                Section(header: Text("PinCode")) {
+                    NavigationLink(destination: PinCodeView().navigationBarTitle("PinCode")) {
+                        Text("PinCode")
+                    }
+                }.listRowBackground(Color.red)
+                
                 }.navigationBarTitle(Text("Extensions"))
-            Section(header: Text("PinCode")) {
-                NavigationLink(destination: PinCodeView().navigationBarTitle("PinCode")) {
-                    Text("PinCode")
-                }
-            }.listRowBackground(Color.red)
+            
             }
         }
     }

@@ -30,7 +30,7 @@ struct Home: View {
     
     var body: some View{
         
-        ZStack {
+        VStack {
             // LockScreen
             if unLocked{
                 Text("Assurance Connected")
@@ -60,44 +60,13 @@ struct LockScreen: View {
         
         
         VStack{
-            HStack{
-                Spacer(minLength: 0)
-                //                Menu(content: {
-                //
-                //                    Label(title: {Text("Help")},
-                //                          icon: { Image(systemName: "info.circle.fill")})
-                //                    .onTapGesture(perform: {
-                //                        //Perform Actions
-                //                    })
-                //
-                //                    Label(title: {Text("Reset Password")},
-                //                          icon: {Image(systemName: "info.fill") })
-                //                    .onTapGesture(perform: {
-                //                        //Perform Actions
-                //                    })
-                //
-                //                }) {
-                //                    Image("menu")
-                //                        .renderingMode(.template)
-                //                        .resizable()
-                //                        .frame(width: 19, height: 19)
-                //                        .foregroundColor(.white)
-                //                        .padding()
-                //                }
-                //            }.padding(.leading)
-                
-                Image("logo")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .padding(.top, 5)
-                
                 Text("Enter Pin to Connect to Assurance")
-                    .font(.title3)
+                    .font(.system(size: 10))
                     .fontWeight(.medium)
-                    .padding(.top, 4)
+                    .padding(.top, 1)
                 
-                HStack(spacing: 22){
-                    // Passord CVircle view
+                HStack(spacing: 2){
+                    // Passord Circle view
                     
                     ForEach(0..<4, id: \.self){index in
                         PasswordView(index: index, password: $password)
@@ -105,19 +74,18 @@ struct LockScreen: View {
                     
                 }
                 // .padding(.top, height < 450 ? 10 : 20)
-                .padding(.top)
+                //.padding(.top)
                 
                 // KeyPad
                 
-                Spacer(minLength: 0)
-                
                 Text(wrongPassword ? "Incorrect Pin" : "")
+                    .font(.system(size: 7))
                     .foregroundColor(.red)
-                    .fontWeight(.heavy)
-                
-                Spacer(minLength: 0)
-                
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 5){
+                    .fontWeight(.medium)
+            
+
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 20, maximum: 25)), count: 3)
+                ,spacing: 1){
                     //Password Button
                     
                     ForEach(1...9, id: \.self){value in
@@ -129,13 +97,12 @@ struct LockScreen: View {
                     
                     PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                     
-                }.padding(.bottom)
+                }
                 
             }
             .navigationTitle("")
             .navigationBarHidden(true)
         }
-    }
     
     
     struct PasswordView: View {
@@ -144,11 +111,11 @@ struct LockScreen: View {
         
         var body: some View {
             
-            ZStack {
+            VStack {
                 
                 Circle()
                     .stroke(Color.white, lineWidth: 1)
-                    .frame(width: 4, height: 4)
+                    .frame(width: 3, height: 3)
                 
                 //checking whether it is typed
                 
@@ -156,7 +123,7 @@ struct LockScreen: View {
                     
                     Circle()
                         .fill(Color.white)
-                        .frame(width: 4, height: 4)
+                        .frame(width: 2, height: 2)
                 }
             }
         }
@@ -170,7 +137,6 @@ struct LockScreen: View {
         @Binding var unlocked: Bool
         @Binding var wrongPass: Bool
         
-        
         var body: some View{
             
             Button(action: setPassword, label: {
@@ -178,24 +144,18 @@ struct LockScreen: View {
                 VStack{
                     
                     if value.count > 1{
-                        //Image...
-                        
                         Image(systemName: "delete.left")
-                            .font(.system(size: 12))
+                            .font(.system(size: 10))
                             .foregroundColor(.white)
                         
                     } else {
                         Text(value)
-                            .font(.title3)
+                            .font(.system(size: 10))
                             .foregroundColor(.white)
                     }
-                }.padding()
-                
-                
-                
-            })
-            
-            
+                }
+            }).frame(width: 25, height: 25)
+            .cornerRadius(10)
         }
         
         func setPassword(){
@@ -205,15 +165,15 @@ struct LockScreen: View {
                 if value.count > 1 {
                     
                     if password.count != 0 {
-                        password.append(value)
+                        
+                        password.removeLast()
                         
                     }
-                    
                 } else {
                     
                     if password.count != 4 {
-                        password.append(value)
                         
+                        password.append(value)
                         
                         // Delay Animation....
                         
@@ -221,7 +181,7 @@ struct LockScreen: View {
                             withAnimation{
                                 if password.count == 4 {
                                     if password == key {
-                                        unlocked.toggle()
+                                        unlocked = true
                                     } else {
                                         wrongPass = true
                                         password.removeAll()
@@ -229,8 +189,6 @@ struct LockScreen: View {
                                 }
                             }
                         }
-                        
-                        
                     }
                 }
             }

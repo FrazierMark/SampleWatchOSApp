@@ -10,7 +10,7 @@
 import UIKit
 import SwiftUI
 // step-assurance-start
-import AEPAssurance
+// import AEPAssurance
 // step-assurance-end
 import AEPCore
 
@@ -24,9 +24,9 @@ struct AssuranceView: View {
                Button(action: {
                     // step-assurance-start
                     // replace the url with the valid one generated on Assurance UI
-                    if let url = URL(string: self.assuranceSessionUrl) {
-                        Assurance.startSession(url: url)
-                    }
+//                    if let url = URL(string: self.assuranceSessionUrl) {
+//                        Assurance.startSession(url: url)
+//                    }
                     // step-assurance-end
                 }){
               Text("Connect")

@@ -54,7 +54,6 @@
 		67C3D8F928A308E800F069FF /* AppTrackingTransparency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		67C3D8FD28A308F500F069FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8FB28A308F100F069FF /* AdSupport.framework */; };
 		67C3D8FE28A308F500F069FF /* AdSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D8FB28A308F100F069FF /* AdSupport.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		67C3D91C28A723C200F069FF /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 67C3D91B28A723C200F069FF /* AEPAssurance */; };
 		67C3D91E28AC308C00F069FF /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D91D28AC308C00F069FF /* WatchKit.framework */; platformFilters = (watchos, ); };
 		67C3D92028AC30BC00F069FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3D91F28AC30BC00F069FF /* UIKit.framework */; };
 		67C9271028AC516200A9B5D7 /* PinCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9270F28AC516200A9B5D7 /* PinCodeView.swift */; };
@@ -147,7 +146,6 @@
 		67C3D8F228A2AF9B00F069FF /* AssuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuranceView.swift; sourceTree = "<group>"; };
 		67C3D8F628A308E200F069FF /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		67C3D8FB28A308F100F069FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		67C3D90F28A7233F00F069FF /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		67C3D91D28AC308C00F069FF /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		67C3D91F28AC30BC00F069FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67C9270F28AC516200A9B5D7 /* PinCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeView.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				67C9274928AC692E00A9B5D7 /* AEPSignal in Frameworks */,
 				67574D7D289087CA00F847F0 /* AEPEdge in Frameworks */,
 				67574D83289087E700F847F0 /* AEPUserProfile in Frameworks */,
-				67C3D91C28A723C200F069FF /* AEPAssurance in Frameworks */,
 				67C9274128AC692E00A9B5D7 /* AEPCore in Frameworks */,
 				67C9274728AC692E00A9B5D7 /* AEPServices in Frameworks */,
 				67574D77289087AF00F847F0 /* AEPMessaging in Frameworks */,
@@ -194,7 +191,6 @@
 		670EFDBE288B82F0008470F2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				67C3D90F28A7233F00F069FF /* aepsdk-assurance-ios */,
 				67C9273F28AC68A800A9B5D7 /* aepsdk-core-ios */,
 			);
 			name = Packages;
@@ -344,7 +340,6 @@
 				67574D82289087E700F847F0 /* AEPUserProfile */,
 				6763FFC428919BBE004552A0 /* AEPEdgeConsent */,
 				678C0506289860D600C14D26 /* AEPOptimize */,
-				67C3D91B28A723C200F069FF /* AEPAssurance */,
 				67C9274028AC692E00A9B5D7 /* AEPCore */,
 				67C9274228AC692E00A9B5D7 /* AEPIdentity */,
 				67C9274428AC692E00A9B5D7 /* AEPLifecycle */,
@@ -800,10 +795,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 678C0505289860D600C14D26 /* XCRemoteSwiftPackageReference "aepsdk-optimize-ios" */;
 			productName = AEPOptimize;
-		};
-		67C3D91B28A723C200F069FF /* AEPAssurance */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AEPAssurance;
 		};
 		67C9274028AC692E00A9B5D7 /* AEPCore */ = {
 			isa = XCSwiftPackageProductDependency;
