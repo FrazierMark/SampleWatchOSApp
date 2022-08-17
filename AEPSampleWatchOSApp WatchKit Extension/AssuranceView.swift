@@ -10,34 +10,35 @@
 import UIKit
 import SwiftUI
 // step-assurance-start
-// import AEPAssurance
+import AEPAssurance
 // step-assurance-end
 import AEPCore
 
 struct AssuranceView: View {
-    @State private var assuranceSessionUrl:String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6b5ae461-8618-4851-bf09-347cf71b02c7"
-    
+
+    @State var check = false
+    @State var answer = false
+
+    @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6b5ae461-8618-4851-bf09-347cf71b02c7"
+
     var body: some View {
-        VStack(alignment: HorizontalAlignment.leading, spacing: 12) {
-            TextField("Copy Assurance Session URL to here", text: $assuranceSessionUrl)
-            HStack {
-               Button(action: {
-                    // step-assurance-start
-                    // replace the url with the valid one generated on Assurance UI
-//                    if let url = URL(string: self.assuranceSessionUrl) {
-//                        Assurance.startSession(url: url)
-//                    }
-                    // step-assurance-end
-                }){
-              Text("Connect")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .font(.caption)
-                }.cornerRadius(5)
-            }
+
+        TextField("Copy Assurance Session URL to here", text: $assuranceSessionUrl)
+
+
+        NavigationLink(destination: PinCodeView()) {
+            Text("PinCodeScreen")
+        }.simultaneousGesture(TapGesture().onEnded {
+                self.callAssurance()
+            })
+    }
+
+
+    func callAssurance() {
+        // step-assurance-start
+        if let url = URL(string: self.assuranceSessionUrl) {
+            Assurance.startSession(url: url)
+            // step-assurance-end
         }
     }
 }
-

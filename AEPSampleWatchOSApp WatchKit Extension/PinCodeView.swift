@@ -10,6 +10,8 @@ import AEPCore
 import SwiftUI
 
 struct PinCodeView: View {
+    
+
     var body: some View {
         NavigationView{
             Home()
@@ -73,32 +75,22 @@ struct LockScreen: View {
                     }
                     
                 }
-                // .padding(.top, height < 450 ? 10 : 20)
-                //.padding(.top)
-                
-                // KeyPad
                 
                 Text(wrongPassword ? "Incorrect Pin" : "")
-                    .font(.system(size: 7))
+                    .font(.system(size: 8))
                     .foregroundColor(.red)
                     .fontWeight(.medium)
             
 
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 20, maximum: 25)), count: 3)
-                ,spacing: 1){
-                    //Password Button
-                    
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 24, maximum: 29)), count: 3)
+                ,spacing: 3){
+                
                     ForEach(1...9, id: \.self){value in
-                        
                         PasswordButton(value: "\(value)", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                     }
-                    
                     PasswordButton(value: "delete.fill", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-                    
                     PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-                    
                 }
-                
             }
             .navigationTitle("")
             .navigationBarHidden(true)
@@ -112,10 +104,9 @@ struct LockScreen: View {
         var body: some View {
             
             VStack {
-                
                 Circle()
                     .stroke(Color.white, lineWidth: 1)
-                    .frame(width: 3, height: 3)
+                    .frame(width: 4, height: 4)
                 
                 //checking whether it is typed
                 
@@ -155,7 +146,9 @@ struct LockScreen: View {
                     }
                 }
             }).frame(width: 25, height: 25)
+            .background(Color.red)
             .cornerRadius(10)
+
         }
         
         func setPassword(){
@@ -163,16 +156,11 @@ struct LockScreen: View {
             
             withAnimation{
                 if value.count > 1 {
-                    
                     if password.count != 0 {
-                        
                         password.removeLast()
-                        
                     }
                 } else {
-                    
                     if password.count != 4 {
-                        
                         password.append(value)
                         
                         // Delay Animation....
