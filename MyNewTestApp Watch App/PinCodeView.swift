@@ -47,10 +47,10 @@ struct Home: View {
 
 struct LockScreen: View {
     
-    @State var password = ""
-    @AppStorage("lock_Password") var key = "1234"
+    @State var pincode = ""
+    @AppStorage("lock_Pincode") var key = "1234"
     @Binding var unLocked: Bool
-    @State var wrongPassword = false
+    @State var wrongPincode = false
     let height = WKInterfaceDevice.current().screenBounds.width
     
     
@@ -64,15 +64,15 @@ struct LockScreen: View {
                     .padding(.top, 1)
                 
                 HStack(spacing: 2){
-                    // Passord Circle view
+                    // Pincode Circle view
                     
                     ForEach(0..<4, id: \.self){index in
-                        PasswordView(index: index, password: $password)
+                        PincodeView(index: index, pincode: $pincode)
                     }
                     
                 }
                 
-                Text(wrongPassword ? "Incorrect Pin" : "")
+                Text(wrongPincode ? "Incorrect Pin" : "")
                     .font(.system(size: 8))
                     .foregroundColor(.red)
                     .fontWeight(.medium)
@@ -82,10 +82,10 @@ struct LockScreen: View {
                 ,spacing: 3){
                 
                     ForEach(1...9, id: \.self){value in
-                        PasswordButton(value: "\(value)", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                        PincodeButton(value: "\(value)", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
                     }
-                    PasswordButton(value: "delete.fill", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
-                    PasswordButton(value: "0", password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                    PincodeButton(value: "delete.fill", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
+                    PincodeButton(value: "0", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
                 }
             }
             .navigationTitle("")
@@ -93,9 +93,9 @@ struct LockScreen: View {
         }
     
     
-    struct PasswordView: View {
+    struct PincodeView: View {
         var index: Int
-        @Binding var password: String
+        @Binding var pincode: String
         
         var body: some View {
             
@@ -106,7 +106,7 @@ struct LockScreen: View {
                 
                 //checking whether it is typed
                 
-                if password.count > index{
+                if pincode.count > index{
                     
                     Circle()
                         .fill(Color.white)
@@ -116,17 +116,17 @@ struct LockScreen: View {
         }
     }
     
-    struct PasswordButton: View {
+    struct PincodeButton: View {
         var value: String
         
-        @Binding var password: String
+        @Binding var pincode: String
         @Binding var key: String
         @Binding var unlocked: Bool
         @Binding var wrongPass: Bool
         
         var body: some View{
             
-            Button(action: setPassword, label: {
+            Button(action: setPincode, label: {
                 
                 VStack{
                     
@@ -147,28 +147,28 @@ struct LockScreen: View {
 
         }
         
-        func setPassword(){
+        func setPincode(){
             // Check if backspace is pressed
             
             withAnimation{
                 if value.count > 1 {
-                    if password.count != 0 {
-                        password.removeLast()
+                    if pincode.count != 0 {
+                        pincode.removeLast()
                     }
                 } else {
-                    if password.count != 4 {
-                        password.append(value)
+                    if pincode.count != 4 {
+                        pincode.append(value)
                         
                         // Delay Animation....
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             withAnimation{
-                                if password.count == 4 {
-                                    if password == key {
+                                if pincode.count == 4 {
+                                    if pincode == key {
                                         unlocked = true
                                     } else {
                                         wrongPass = true
-                                        password.removeAll()
+                                        pincode.removeAll()
                                     }
                                 }
                             }
