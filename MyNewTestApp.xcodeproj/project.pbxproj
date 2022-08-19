@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6719CEEE28B04B7D0076CD2D /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 6719CEED28B04B7D0076CD2D /* AEPAssurance */; };
+		671D926C28AECE1D0065EF8E /* AEPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926B28AECE1D0065EF8E /* AEPCore */; };
+		671D926E28AECE1D0065EF8E /* AEPIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926D28AECE1D0065EF8E /* AEPIdentity */; };
+		671D927028AECE1D0065EF8E /* AEPLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926F28AECE1D0065EF8E /* AEPLifecycle */; };
+		671D927228AECE1D0065EF8E /* AEPServices in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927128AECE1D0065EF8E /* AEPServices */; };
+		671D927428AECE1D0065EF8E /* AEPSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927328AECE1D0065EF8E /* AEPSignal */; };
+		671D927628AECE220065EF8E /* AEPOptimize in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927528AECE220065EF8E /* AEPOptimize */; };
+		671D927828AECE250065EF8E /* AEPUserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927728AECE250065EF8E /* AEPUserProfile */; };
+		671D927A28AECE2E0065EF8E /* AEPEdge in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927928AECE2E0065EF8E /* AEPEdge */; };
+		671D927C28AECE410065EF8E /* AEPEdgeConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927B28AECE410065EF8E /* AEPEdgeConsent */; };
+		671D927E28AECE460065EF8E /* AEPEdgeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927D28AECE460065EF8E /* AEPEdgeIdentity */; };
+		671D928028AECE4B0065EF8E /* AEPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 671D927F28AECE4B0065EF8E /* AEPMessaging */; };
+		67389DF028ADAE54002B08CF /* MyNewTestApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67389DF528ADAE54002B08CF /* MyNewTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */; };
+		67389DF728ADAE54002B08CF /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389DF628ADAE54002B08CF /* MenuView.swift */; };
+		67389DF928ADAE55002B08CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67389DF828ADAE55002B08CF /* Assets.xcassets */; };
+		67389DFC28ADAE55002B08CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67389DFB28ADAE55002B08CF /* Preview Assets.xcassets */; };
+		67389E0728ADAECE002B08CF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0628ADAECE002B08CF /* NotificationController.swift */; };
+		67389E0928ADAEDD002B08CF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0828ADAEDD002B08CF /* NotificationView.swift */; };
+		67389E0B28ADAEEF002B08CF /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0A28ADAEEF002B08CF /* ConsentView.swift */; };
+		67389E0D28ADAEFF002B08CF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0C28ADAEFF002B08CF /* ComplicationController.swift */; };
+		67389E0F28ADAF0D002B08CF /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0E28ADAF0D002B08CF /* EdgeView.swift */; };
+		67389E1128ADAF1E002B08CF /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1028ADAF1E002B08CF /* ButtonStyle.swift */; };
+		67389E1328ADAF2E002B08CF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */; };
+		67389E1528ADAF48002B08CF /* AdIdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1428ADAF48002B08CF /* AdIdUtils.swift */; };
+		67389E1728ADAF55002B08CF /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1628ADAF55002B08CF /* CoreView.swift */; };
+		67389E1928ADAF6D002B08CF /* AssuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1828ADAF6D002B08CF /* AssuranceView.swift */; };
+		67389E1B28ADAF83002B08CF /* OptimizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1A28ADAF83002B08CF /* OptimizeView.swift */; };
+		67389E1D28ADAF91002B08CF /* PinCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1C28ADAF91002B08CF /* PinCodeView.swift */; };
+		67389E1F28ADAFA1002B08CF /* EdgeIdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1E28ADAFA1002B08CF /* EdgeIdentityView.swift */; };
+		67389E2128ADAFB3002B08CF /* MessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2028ADAFB3002B08CF /* MessagingView.swift */; };
+		67389E2428ADB0AF002B08CF /* CartAbandons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2328ADB0AF002B08CF /* CartAbandons.swift */; };
+		67389E2628ADB0C6002B08CF /* Checkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2528ADB0C6002B08CF /* Checkouts.swift */; };
+		67389E2828ADB0D2002B08CF /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2728ADB0D2002B08CF /* Commerce.swift */; };
+		67389E2A28ADB0E7002B08CF /* InStorePurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2928ADB0E7002B08CF /* InStorePurchase.swift */; };
+		67389E2C28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2B28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift */; };
+		67389E2E28ADB107002B08CF /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2D28ADB107002B08CF /* Order.swift */; };
+		67389E3028ADB118002B08CF /* PaymentsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E2F28ADB118002B08CF /* PaymentsItem.swift */; };
+		67389E3228ADB13D002B08CF /* ProductListAdds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3128ADB13D002B08CF /* ProductListAdds.swift */; };
+		67389E3428ADB153002B08CF /* ProductListItemsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3328ADB153002B08CF /* ProductListItemsItem.swift */; };
+		67389E3628ADB163002B08CF /* ProductListOpens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3528ADB163002B08CF /* ProductListOpens.swift */; };
+		67389E3828ADB182002B08CF /* ProductListRemovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3728ADB182002B08CF /* ProductListRemovals.swift */; };
+		67389E3A28ADB1A7002B08CF /* ProductListReopens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3928ADB1A7002B08CF /* ProductListReopens.swift */; };
+		67389E3C28ADB1B6002B08CF /* ProductListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3B28ADB1B6002B08CF /* ProductListViews.swift */; };
+		67389E3E28ADB1CA002B08CF /* ProductViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3D28ADB1CA002B08CF /* ProductViews.swift */; };
+		67389E4028ADB1E0002B08CF /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3F28ADB1E0002B08CF /* Purchases.swift */; };
+		67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E4128ADB200002B08CF /* SaveForLaters.swift */; };
+		67F1776D28AF128C0077272A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776B28AF128C0077272A /* UserNotificationsUI.framework */; };
+		67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776C28AF128C0077272A /* UserNotifications.framework */; };
+		67F1777028B015100077272A /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776F28B015100077272A /* WatchKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67389DF128ADAE54002B08CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67389DE328ADAE54002B08CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67389DEE28ADAE54002B08CF;
+			remoteInfo = "MyNewTestApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67389E0228ADAE55002B08CF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				67389DF028ADAE54002B08CF /* MyNewTestApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6719CEEC28B04B350076CD2D /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
+		671D926A28AEC3AD0065EF8E /* MyNewTestApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyNewTestApp Watch App.entitlements"; sourceTree = "<group>"; };
+		67389DE928ADAE54002B08CF /* MyNewTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyNewTestApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewTestAppApp.swift; sourceTree = "<group>"; };
+		67389DF628ADAE54002B08CF /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		67389DF828ADAE55002B08CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67389DFB28ADAE55002B08CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67389E0628ADAECE002B08CF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		67389E0828ADAEDD002B08CF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		67389E0A28ADAEEF002B08CF /* ConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentView.swift; sourceTree = "<group>"; };
+		67389E0C28ADAEFF002B08CF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		67389E0E28ADAF0D002B08CF /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
+		67389E1028ADAF1E002B08CF /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		67389E1428ADAF48002B08CF /* AdIdUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdIdUtils.swift; sourceTree = "<group>"; };
+		67389E1628ADAF55002B08CF /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
+		67389E1828ADAF6D002B08CF /* AssuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuranceView.swift; sourceTree = "<group>"; };
+		67389E1A28ADAF83002B08CF /* OptimizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizeView.swift; sourceTree = "<group>"; };
+		67389E1C28ADAF91002B08CF /* PinCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeView.swift; sourceTree = "<group>"; };
+		67389E1E28ADAFA1002B08CF /* EdgeIdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeIdentityView.swift; sourceTree = "<group>"; };
+		67389E2028ADAFB3002B08CF /* MessagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingView.swift; sourceTree = "<group>"; };
+		67389E2328ADB0AF002B08CF /* CartAbandons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAbandons.swift; sourceTree = "<group>"; };
+		67389E2528ADB0C6002B08CF /* Checkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkouts.swift; sourceTree = "<group>"; };
+		67389E2728ADB0D2002B08CF /* Commerce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
+		67389E2928ADB0E7002B08CF /* InStorePurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InStorePurchase.swift; sourceTree = "<group>"; };
+		67389E2B28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSDKCommerceSchema.swift; sourceTree = "<group>"; };
+		67389E2D28ADB107002B08CF /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		67389E2F28ADB118002B08CF /* PaymentsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsItem.swift; sourceTree = "<group>"; };
+		67389E3128ADB13D002B08CF /* ProductListAdds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListAdds.swift; sourceTree = "<group>"; };
+		67389E3328ADB153002B08CF /* ProductListItemsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListItemsItem.swift; sourceTree = "<group>"; };
+		67389E3528ADB163002B08CF /* ProductListOpens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListOpens.swift; sourceTree = "<group>"; };
+		67389E3728ADB182002B08CF /* ProductListRemovals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRemovals.swift; sourceTree = "<group>"; };
+		67389E3928ADB1A7002B08CF /* ProductListReopens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListReopens.swift; sourceTree = "<group>"; };
+		67389E3B28ADB1B6002B08CF /* ProductListViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViews.swift; sourceTree = "<group>"; };
+		67389E3D28ADB1CA002B08CF /* ProductViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViews.swift; sourceTree = "<group>"; };
+		67389E3F28ADB1E0002B08CF /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
+		67389E4128ADB200002B08CF /* SaveForLaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveForLaters.swift; sourceTree = "<group>"; };
+		67389E6228ADB5C3002B08CF /* aepsdk-core-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-core-ios"; path = "../SDKs/aepsdk-core-ios"; sourceTree = "<group>"; };
+		67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyNewTestApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		67F1776B28AF128C0077272A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
+		67F1776C28AF128C0077272A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
+		67F1776F28B015100077272A /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67389DEC28ADAE54002B08CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671D927828AECE250065EF8E /* AEPUserProfile in Frameworks */,
+				671D926C28AECE1D0065EF8E /* AEPCore in Frameworks */,
+				671D927E28AECE460065EF8E /* AEPEdgeIdentity in Frameworks */,
+				67F1777028B015100077272A /* WatchKit.framework in Frameworks */,
+				671D928028AECE4B0065EF8E /* AEPMessaging in Frameworks */,
+				6719CEEE28B04B7D0076CD2D /* AEPAssurance in Frameworks */,
+				671D927A28AECE2E0065EF8E /* AEPEdge in Frameworks */,
+				671D927428AECE1D0065EF8E /* AEPSignal in Frameworks */,
+				67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */,
+				671D927228AECE1D0065EF8E /* AEPServices in Frameworks */,
+				671D926E28AECE1D0065EF8E /* AEPIdentity in Frameworks */,
+				671D927628AECE220065EF8E /* AEPOptimize in Frameworks */,
+				671D927C28AECE410065EF8E /* AEPEdgeConsent in Frameworks */,
+				671D927028AECE1D0065EF8E /* AEPLifecycle in Frameworks */,
+				67F1776D28AF128C0077272A /* UserNotificationsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67389DE228ADAE54002B08CF = {
+			isa = PBXGroup;
+			children = (
+				67389E4328ADB29E002B08CF /* Packages */,
+				67389DF328ADAE54002B08CF /* MyNewTestApp Watch App */,
+				67389DEA28ADAE54002B08CF /* Products */,
+				67389E5F28ADB50A002B08CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67389DEA28ADAE54002B08CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67389DE928ADAE54002B08CF /* MyNewTestApp.app */,
+				67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67389DF328ADAE54002B08CF /* MyNewTestApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */,
+				671D926A28AEC3AD0065EF8E /* MyNewTestApp Watch App.entitlements */,
+				67389E2228ADAFBF002B08CF /* xdmlib */,
+				67389E0628ADAECE002B08CF /* NotificationController.swift */,
+				67389E0828ADAEDD002B08CF /* NotificationView.swift */,
+				67389E0A28ADAEEF002B08CF /* ConsentView.swift */,
+				67389E0C28ADAEFF002B08CF /* ComplicationController.swift */,
+				67389E0E28ADAF0D002B08CF /* EdgeView.swift */,
+				67389E1028ADAF1E002B08CF /* ButtonStyle.swift */,
+				67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */,
+				67389E1428ADAF48002B08CF /* AdIdUtils.swift */,
+				67389E1628ADAF55002B08CF /* CoreView.swift */,
+				67389E1828ADAF6D002B08CF /* AssuranceView.swift */,
+				67389E1A28ADAF83002B08CF /* OptimizeView.swift */,
+				67389E1C28ADAF91002B08CF /* PinCodeView.swift */,
+				67389E1E28ADAFA1002B08CF /* EdgeIdentityView.swift */,
+				67389E2028ADAFB3002B08CF /* MessagingView.swift */,
+				67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */,
+				67389DF628ADAE54002B08CF /* MenuView.swift */,
+				67389DF828ADAE55002B08CF /* Assets.xcassets */,
+				67389DFA28ADAE55002B08CF /* Preview Content */,
+			);
+			path = "MyNewTestApp Watch App";
+			sourceTree = "<group>";
+		};
+		67389DFA28ADAE55002B08CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				67389DFB28ADAE55002B08CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67389E2228ADAFBF002B08CF /* xdmlib */ = {
+			isa = PBXGroup;
+			children = (
+				67389E2328ADB0AF002B08CF /* CartAbandons.swift */,
+				67389E2528ADB0C6002B08CF /* Checkouts.swift */,
+				67389E2728ADB0D2002B08CF /* Commerce.swift */,
+				67389E2928ADB0E7002B08CF /* InStorePurchase.swift */,
+				67389E2B28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift */,
+				67389E2D28ADB107002B08CF /* Order.swift */,
+				67389E2F28ADB118002B08CF /* PaymentsItem.swift */,
+				67389E3128ADB13D002B08CF /* ProductListAdds.swift */,
+				67389E3328ADB153002B08CF /* ProductListItemsItem.swift */,
+				67389E3528ADB163002B08CF /* ProductListOpens.swift */,
+				67389E3728ADB182002B08CF /* ProductListRemovals.swift */,
+				67389E3928ADB1A7002B08CF /* ProductListReopens.swift */,
+				67389E3B28ADB1B6002B08CF /* ProductListViews.swift */,
+				67389E3D28ADB1CA002B08CF /* ProductViews.swift */,
+				67389E3F28ADB1E0002B08CF /* Purchases.swift */,
+				67389E4128ADB200002B08CF /* SaveForLaters.swift */,
+			);
+			path = xdmlib;
+			sourceTree = "<group>";
+		};
+		67389E4328ADB29E002B08CF /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				67389E6228ADB5C3002B08CF /* aepsdk-core-ios */,
+				6719CEEC28B04B350076CD2D /* aepsdk-assurance-ios */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		67389E5F28ADB50A002B08CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67F1776F28B015100077272A /* WatchKit.framework */,
+				67F1776C28AF128C0077272A /* UserNotifications.framework */,
+				67F1776B28AF128C0077272A /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67389DE828ADAE54002B08CF /* MyNewTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67389E0328ADAE55002B08CF /* Build configuration list for PBXNativeTarget "MyNewTestApp" */;
+			buildPhases = (
+				67389DE728ADAE54002B08CF /* Resources */,
+				67389E0228ADAE55002B08CF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67389DF228ADAE54002B08CF /* PBXTargetDependency */,
+			);
+			name = MyNewTestApp;
+			productName = MyNewTestApp;
+			productReference = 67389DE928ADAE54002B08CF /* MyNewTestApp.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		67389DEE28ADAE54002B08CF /* MyNewTestApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67389DFF28ADAE55002B08CF /* Build configuration list for PBXNativeTarget "MyNewTestApp Watch App" */;
+			buildPhases = (
+				67389DEB28ADAE54002B08CF /* Sources */,
+				67389DEC28ADAE54002B08CF /* Frameworks */,
+				67389DED28ADAE54002B08CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyNewTestApp Watch App";
+			packageProductDependencies = (
+				671D926B28AECE1D0065EF8E /* AEPCore */,
+				671D926D28AECE1D0065EF8E /* AEPIdentity */,
+				671D926F28AECE1D0065EF8E /* AEPLifecycle */,
+				671D927128AECE1D0065EF8E /* AEPServices */,
+				671D927328AECE1D0065EF8E /* AEPSignal */,
+				671D927528AECE220065EF8E /* AEPOptimize */,
+				671D927728AECE250065EF8E /* AEPUserProfile */,
+				671D927928AECE2E0065EF8E /* AEPEdge */,
+				671D927B28AECE410065EF8E /* AEPEdgeConsent */,
+				671D927D28AECE460065EF8E /* AEPEdgeIdentity */,
+				671D927F28AECE4B0065EF8E /* AEPMessaging */,
+				6719CEED28B04B7D0076CD2D /* AEPAssurance */,
+			);
+			productName = "MyNewTestApp Watch App";
+			productReference = 67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67389DE328ADAE54002B08CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					67389DE828ADAE54002B08CF = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					67389DEE28ADAE54002B08CF = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 67389DE628ADAE54002B08CF /* Build configuration list for PBXProject "MyNewTestApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67389DE228ADAE54002B08CF;
+			packageReferences = (
+				67389E6D28ADB61E002B08CF /* XCRemoteSwiftPackageReference "aepsdk-optimize-ios" */,
+				67389E7028ADB62A002B08CF /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */,
+				67389E7328ADB636002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */,
+				67389E7628ADB645002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */,
+				67389E7928ADB652002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */,
+				67389E7C28ADB660002B08CF /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */,
+			);
+			productRefGroup = 67389DEA28ADAE54002B08CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67389DE828ADAE54002B08CF /* MyNewTestApp */,
+				67389DEE28ADAE54002B08CF /* MyNewTestApp Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67389DE728ADAE54002B08CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67389DED28ADAE54002B08CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67389DFC28ADAE55002B08CF /* Preview Assets.xcassets in Resources */,
+				67389DF928ADAE55002B08CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67389DEB28ADAE54002B08CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67389E0728ADAECE002B08CF /* NotificationController.swift in Sources */,
+				67389E2628ADB0C6002B08CF /* Checkouts.swift in Sources */,
+				67389E2428ADB0AF002B08CF /* CartAbandons.swift in Sources */,
+				67389E1128ADAF1E002B08CF /* ButtonStyle.swift in Sources */,
+				67389E2E28ADB107002B08CF /* Order.swift in Sources */,
+				67389E1928ADAF6D002B08CF /* AssuranceView.swift in Sources */,
+				67389E1328ADAF2E002B08CF /* ExtensionDelegate.swift in Sources */,
+				67389DF728ADAE54002B08CF /* MenuView.swift in Sources */,
+				67389E2828ADB0D2002B08CF /* Commerce.swift in Sources */,
+				67389E3228ADB13D002B08CF /* ProductListAdds.swift in Sources */,
+				67389E1B28ADAF83002B08CF /* OptimizeView.swift in Sources */,
+				67389E3C28ADB1B6002B08CF /* ProductListViews.swift in Sources */,
+				67389E0F28ADAF0D002B08CF /* EdgeView.swift in Sources */,
+				67389E2128ADAFB3002B08CF /* MessagingView.swift in Sources */,
+				67389E3828ADB182002B08CF /* ProductListRemovals.swift in Sources */,
+				67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */,
+				67389E3028ADB118002B08CF /* PaymentsItem.swift in Sources */,
+				67389E3E28ADB1CA002B08CF /* ProductViews.swift in Sources */,
+				67389E1728ADAF55002B08CF /* CoreView.swift in Sources */,
+				67389DF528ADAE54002B08CF /* MyNewTestAppApp.swift in Sources */,
+				67389E0928ADAEDD002B08CF /* NotificationView.swift in Sources */,
+				67389E2C28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift in Sources */,
+				67389E1528ADAF48002B08CF /* AdIdUtils.swift in Sources */,
+				67389E3A28ADB1A7002B08CF /* ProductListReopens.swift in Sources */,
+				67389E0B28ADAEEF002B08CF /* ConsentView.swift in Sources */,
+				67389E1F28ADAFA1002B08CF /* EdgeIdentityView.swift in Sources */,
+				67389E3628ADB163002B08CF /* ProductListOpens.swift in Sources */,
+				67389E3428ADB153002B08CF /* ProductListItemsItem.swift in Sources */,
+				67389E0D28ADAEFF002B08CF /* ComplicationController.swift in Sources */,
+				67389E4028ADB1E0002B08CF /* Purchases.swift in Sources */,
+				67389E1D28ADAF91002B08CF /* PinCodeView.swift in Sources */,
+				67389E2A28ADB0E7002B08CF /* InStorePurchase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67389DF228ADAE54002B08CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67389DEE28ADAE54002B08CF /* MyNewTestApp Watch App */;
+			targetProxy = 67389DF128ADAE54002B08CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67389DFD28ADAE55002B08CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67389DFE28ADAE55002B08CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		67389E0028ADAE55002B08CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyNewTestApp Watch App/MyNewTestApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "MyNewTestApp\\ Watch\\ App/Preview\\ Content";
+				DEVELOPMENT_TEAM = W25MXXD3AC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MyNewTestApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MyNewTestApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.MyNewTestApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		67389E0128ADAE55002B08CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyNewTestApp Watch App/MyNewTestApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "MyNewTestApp\\ Watch\\ App/Preview\\ Content";
+				DEVELOPMENT_TEAM = W25MXXD3AC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MyNewTestApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MyNewTestApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.MyNewTestApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		67389E0428ADAE55002B08CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W25MXXD3AC;
+				INFOPLIST_KEY_CFBundleDisplayName = MyNewTestApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.MyNewTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		67389E0528ADAE55002B08CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W25MXXD3AC;
+				INFOPLIST_KEY_CFBundleDisplayName = MyNewTestApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.markfrazier.MyNewTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67389DE628ADAE54002B08CF /* Build configuration list for PBXProject "MyNewTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67389DFD28ADAE55002B08CF /* Debug */,
+				67389DFE28ADAE55002B08CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67389DFF28ADAE55002B08CF /* Build configuration list for PBXNativeTarget "MyNewTestApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67389E0028ADAE55002B08CF /* Debug */,
+				67389E0128ADAE55002B08CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67389E0328ADAE55002B08CF /* Build configuration list for PBXNativeTarget "MyNewTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67389E0428ADAE55002B08CF /* Debug */,
+				67389E0528ADAE55002B08CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67389E6D28ADB61E002B08CF /* XCRemoteSwiftPackageReference "aepsdk-optimize-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-optimize-ios.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+		67389E7028ADB62A002B08CF /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-userprofile-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		67389E7328ADB636002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-edgeconsent-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		67389E7628ADB645002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-edge-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		67389E7928ADB652002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-edgeidentity-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		67389E7C28ADB660002B08CF /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrazierMark/aepsdk-messaging-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6719CEED28B04B7D0076CD2D /* AEPAssurance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPAssurance;
+		};
+		671D926B28AECE1D0065EF8E /* AEPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPCore;
+		};
+		671D926D28AECE1D0065EF8E /* AEPIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPIdentity;
+		};
+		671D926F28AECE1D0065EF8E /* AEPLifecycle */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPLifecycle;
+		};
+		671D927128AECE1D0065EF8E /* AEPServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPServices;
+		};
+		671D927328AECE1D0065EF8E /* AEPSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPSignal;
+		};
+		671D927528AECE220065EF8E /* AEPOptimize */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E6D28ADB61E002B08CF /* XCRemoteSwiftPackageReference "aepsdk-optimize-ios" */;
+			productName = AEPOptimize;
+		};
+		671D927728AECE250065EF8E /* AEPUserProfile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E7028ADB62A002B08CF /* XCRemoteSwiftPackageReference "aepsdk-userprofile-ios" */;
+			productName = AEPUserProfile;
+		};
+		671D927928AECE2E0065EF8E /* AEPEdge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E7628ADB645002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edge-ios" */;
+			productName = AEPEdge;
+		};
+		671D927B28AECE410065EF8E /* AEPEdgeConsent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E7328ADB636002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeconsent-ios" */;
+			productName = AEPEdgeConsent;
+		};
+		671D927D28AECE460065EF8E /* AEPEdgeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E7928ADB652002B08CF /* XCRemoteSwiftPackageReference "aepsdk-edgeidentity-ios" */;
+			productName = AEPEdgeIdentity;
+		};
+		671D927F28AECE4B0065EF8E /* AEPMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67389E7C28ADB660002B08CF /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */;
+			productName = AEPMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 67389DE328ADAE54002B08CF /* Project object */;
+}
