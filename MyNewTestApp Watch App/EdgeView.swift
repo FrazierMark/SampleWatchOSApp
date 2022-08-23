@@ -1,15 +1,15 @@
-//
-//  EdgeView.swift
-//  MyNewTestApp Watch App
-//
-//  Created by Mark Frazier on 8/17/22.
-//
+/*
+ Copyright 2022 Adobe
+ All Rights Reserved.
+ 
+ NOTICE: Adobe permits you to use, modify, and distribute this file in
+ accordance with the terms of the Adobe license agreement accompanying
+ it.
+ */
 
 import UIKit
 import SwiftUI
-//step-edge-start
 import AEPEdge
-//step-edge-end
 import AEPCore
 
 struct EdgeView: View {
@@ -61,7 +61,7 @@ struct EdgeView: View {
             Text("Select a Product").bold()
             Picker(selection: $productIndex, label: Text("Select product.")) {
                 ForEach(0..<products.count, id: \.self) {
-                    Text(self.products[$0].name).font(.headline)
+                    Text(self.products[$0].name).font(.system(size: 13))
                 }
             }
             .labelsHidden()
@@ -73,6 +73,7 @@ struct EdgeView: View {
     var commerceExampleSection: some View {
         VStack(alignment: .leading, spacing: 11) {
             Text("XDM Commerce Example")
+                .font(.system(size: 15))
             HStack {
                 Button(action: {
                     self.sendAddToCartXDMEvent()
@@ -85,7 +86,7 @@ struct EdgeView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
-                    .background(Color.gray)
+                    .background(Color.red)
                     .foregroundColor(.white)
                     .cornerRadius(5)
                 }
@@ -106,7 +107,7 @@ struct EdgeView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
-                    .background(Color.gray)
+                    .background(Color.red)
                     .foregroundColor(.white)
                     .cornerRadius(5)
                 }
@@ -115,7 +116,6 @@ struct EdgeView: View {
                         Alert(title: Text("Purchase"), message: Text("Thank you for your purchase!"), dismissButton: .default(Text("OK")))
                     }
         }
-        
     }
     
     /// UI elements for the product review example
@@ -126,22 +126,24 @@ struct EdgeView: View {
             TextField("Reviewer email", text: $reviewerEmail)
                 //.textFieldStyle(.none)
                 .textInputAutocapitalization(.none)
+                .font(.system(size: 14))
             
             HStack {
                 Text("Rating:")
                 Picker(selection: $reviewRating, label: Text("Rating")) {
-                    Text("Rubbish").tag(1).font(.headline)
-                    Text("Okay").tag(2).font(.headline)
-                    Text("Good").tag(3).font(.headline)
-                    Text("Great").tag(4).font(.headline)
-                    Text("Fantastic!").tag(5).font(.headline)
+                    Text("Rubbish").tag(1).font(.system(size: 13))
+                    Text("Okay").tag(2).font(.system(size: 13))
+                    Text("Good").tag(3).font(.system(size: 13))
+                    Text("Great").tag(4).font(.system(size: 13))
+                    Text("Fantastic!").tag(5).font(.system(size: 13))
                 }
                 .labelsHidden()
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 80, alignment: .center)
+                
             }
                         
             TextField("Write review here.", text: $reviewText)
-                //.textFieldStyle(.roundedBorder)
+                .font(.system(size: 14))
                 
             Button(action: {
                 self.sendProductReviewXDMEvent()
@@ -150,11 +152,11 @@ struct EdgeView: View {
                     Image(systemName: "pencil")
                         .font(.caption)
                     Text("Submit Review")
-                        .font(.caption)
+                        .font(.system(size: 13))
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
-                .background(Color.gray)
+                .background(Color.red)
                 .foregroundColor(.white)
                 .cornerRadius(5)
             }
@@ -254,10 +256,8 @@ struct EdgeView: View {
 
         // Create an Experience Event with the built schema and send it using the Platform extension
 
-        //step-edge-start
         let event = ExperienceEvent(xdm: xdmData)
         Edge.sendEvent(experienceEvent: event)
-        //step-edge-end
         
         self.showPurchaseMessage = true
     }
@@ -307,5 +307,7 @@ struct ProductItem {
     let price: Double
     let currencyCode: String
 }
+
+
 
 
