@@ -173,7 +173,6 @@ struct PincodeScreen: View {
                         pincode.removeLast()
                     }
                 } else if (value == "connect") && pincode.count == 4 {
-                    print("THIS IS THE PINCODE: \(pincode)")
                     self.callAssurance(pin: pincode)
                 } else {
                     if pincode.count != 4 {
@@ -200,7 +199,7 @@ struct PincodeScreen: View {
         }
         func callAssurance(pin: String) {
             if let url = URL(string: self.assuranceSessionUrl) {
-                Assurance.startSession(url: url, pincode: pin)
+                Assurance.startSession(url: url, pin: pin)
             }
         }
 
