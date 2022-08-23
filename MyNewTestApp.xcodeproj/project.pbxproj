@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6719CEEE28B04B7D0076CD2D /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 6719CEED28B04B7D0076CD2D /* AEPAssurance */; };
 		671D926C28AECE1D0065EF8E /* AEPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926B28AECE1D0065EF8E /* AEPCore */; };
 		671D926E28AECE1D0065EF8E /* AEPIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926D28AECE1D0065EF8E /* AEPIdentity */; };
 		671D927028AECE1D0065EF8E /* AEPLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 671D926F28AECE1D0065EF8E /* AEPLifecycle */; };
@@ -54,6 +53,7 @@
 		67389E3E28ADB1CA002B08CF /* ProductViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3D28ADB1CA002B08CF /* ProductViews.swift */; };
 		67389E4028ADB1E0002B08CF /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E3F28ADB1E0002B08CF /* Purchases.swift */; };
 		67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E4128ADB200002B08CF /* SaveForLaters.swift */; };
+		6762B62028B426A800BFF981 /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 6762B61F28B426A800BFF981 /* AEPAssurance */; };
 		67F1776D28AF128C0077272A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776B28AF128C0077272A /* UserNotificationsUI.framework */; };
 		67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776C28AF128C0077272A /* UserNotifications.framework */; };
 		67F1777028B015100077272A /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776F28B015100077272A /* WatchKit.framework */; };
@@ -84,7 +84,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6719CEEC28B04B350076CD2D /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		671D926A28AEC3AD0065EF8E /* MyNewTestApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyNewTestApp Watch App.entitlements"; sourceTree = "<group>"; };
 		67389DE928ADAE54002B08CF /* MyNewTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyNewTestApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +122,7 @@
 		67389E3F28ADB1E0002B08CF /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
 		67389E4128ADB200002B08CF /* SaveForLaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveForLaters.swift; sourceTree = "<group>"; };
 		67389E6228ADB5C3002B08CF /* aepsdk-core-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-core-ios"; path = "../SDKs/aepsdk-core-ios"; sourceTree = "<group>"; };
+		6762B61E28B4269C00BFF981 /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyNewTestApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		67F1776B28AF128C0077272A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
 		67F1776C28AF128C0077272A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,7 +139,7 @@
 				671D927E28AECE460065EF8E /* AEPEdgeIdentity in Frameworks */,
 				67F1777028B015100077272A /* WatchKit.framework in Frameworks */,
 				671D928028AECE4B0065EF8E /* AEPMessaging in Frameworks */,
-				6719CEEE28B04B7D0076CD2D /* AEPAssurance in Frameworks */,
+				6762B62028B426A800BFF981 /* AEPAssurance in Frameworks */,
 				671D927A28AECE2E0065EF8E /* AEPEdge in Frameworks */,
 				671D927428AECE1D0065EF8E /* AEPSignal in Frameworks */,
 				67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */,
@@ -181,6 +181,7 @@
 				671D926A28AEC3AD0065EF8E /* MyNewTestApp Watch App.entitlements */,
 				67389E2228ADAFBF002B08CF /* xdmlib */,
 				67389E0628ADAECE002B08CF /* NotificationController.swift */,
+				67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */,
 				67389E0828ADAEDD002B08CF /* NotificationView.swift */,
 				67389E0A28ADAEEF002B08CF /* ConsentView.swift */,
 				67389E0C28ADAEFF002B08CF /* ComplicationController.swift */,
@@ -194,7 +195,6 @@
 				67389E1C28ADAF91002B08CF /* PinCodeView.swift */,
 				67389E1E28ADAFA1002B08CF /* EdgeIdentityView.swift */,
 				67389E2028ADAFB3002B08CF /* MessagingView.swift */,
-				67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */,
 				67389DF628ADAE54002B08CF /* MenuView.swift */,
 				67389DF828ADAE55002B08CF /* Assets.xcassets */,
 				67389DFA28ADAE55002B08CF /* Preview Content */,
@@ -237,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				67389E6228ADB5C3002B08CF /* aepsdk-core-ios */,
-				6719CEEC28B04B350076CD2D /* aepsdk-assurance-ios */,
+				6762B61E28B4269C00BFF981 /* aepsdk-assurance-ios */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 				671D927B28AECE410065EF8E /* AEPEdgeConsent */,
 				671D927D28AECE460065EF8E /* AEPEdgeIdentity */,
 				671D927F28AECE4B0065EF8E /* AEPMessaging */,
-				6719CEED28B04B7D0076CD2D /* AEPAssurance */,
+				6762B61F28B426A800BFF981 /* AEPAssurance */,
 			);
 			productName = "MyNewTestApp Watch App";
 			productReference = 67389DEF28ADAE54002B08CF /* MyNewTestApp Watch App.app */;
@@ -709,10 +709,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6719CEED28B04B7D0076CD2D /* AEPAssurance */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AEPAssurance;
-		};
 		671D926B28AECE1D0065EF8E /* AEPCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AEPCore;
@@ -762,6 +758,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 67389E7C28ADB660002B08CF /* XCRemoteSwiftPackageReference "aepsdk-messaging-ios" */;
 			productName = AEPMessaging;
+		};
+		6762B61F28B426A800BFF981 /* AEPAssurance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AEPAssurance;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

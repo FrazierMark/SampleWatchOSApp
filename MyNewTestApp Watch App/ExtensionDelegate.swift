@@ -30,7 +30,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
     
   func applicationDidFinishLaunching() {
       
-      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, Assurance.self, UserProfile.self,  Signal.self, Messaging.self]
+      let extensions = [Edge.self, Lifecycle.self, UserProfile.self, Consent.self, AEPIdentity.Identity.self, AEPEdgeIdentity.Identity.self, Assurance.self, UserProfile.self,  Signal.self, Messaging.self] 
       
       MobileCore.setLogLevel(.trace)
       MobileCore.registerExtensions(extensions, {

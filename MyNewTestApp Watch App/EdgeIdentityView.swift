@@ -36,7 +36,7 @@ struct EdgeIdentityView: View {
 //        print("Ad tracking not authorized; setting ad ID to the empty string")
 //        MobileCore.setAdvertisingIdentifier("")
 //         }
-        print("Here there be UUIDs!!")
+        
         print(WKInterfaceDevice.current().identifierForVendor?.uuidString ?? "")
         MobileCore.setAdvertisingIdentifier(WKInterfaceDevice.current().identifierForVendor?.uuidString ?? "")
     }
