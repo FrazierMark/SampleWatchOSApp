@@ -14,9 +14,6 @@ import AEPCore
 
 struct AssuranceView: View {
     
-    @State var check = false
-    @State var answer = false
-    
     @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6ad1113f-881c-4b60-8a13-7827659cfefd"
     
     
@@ -28,17 +25,9 @@ struct AssuranceView: View {
         
         
         NavigationLink(destination: PinCodeView()) {
-            Text("PinCodeScreen")
-            //        }.simultaneousGesture(TapGesture().onEnded {
-            //                self.callAssurance()
-            //            })
-        }
-        
-        
-        //    func callAssurance() {
-        //       if let url = URL(string: self.assuranceSessionUrl) {
-        //           Assurance.startSession(url: url)
-        //        }
-        //    }
+            Text("Pincode")
+                
+        }.background(Color.red)
+            .clipShape(Capsule())
     }
 }
