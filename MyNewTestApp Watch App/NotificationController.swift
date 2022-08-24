@@ -1,20 +1,22 @@
-//
-//  NotificationController.swift
-//  MyNewTestApp Watch App
-//
-//  Created by Mark Frazier on 8/17/22.
-//
+/*
+ Copyright 2022 Adobe
+ All Rights Reserved.
+ 
+ NOTICE: Adobe permits you to use, modify, and distribute this file in
+ accordance with the terms of the Adobe license agreement accompanying
+ it.
+ */
 
 import WatchKit
 import SwiftUI
 import UserNotifications
 
 class NotificationController: WKUserNotificationHostingController<NotificationView> {
-    var image: Image!
+    var titleSubject: String!
      var message: String!
 
     override var body: NotificationView {
-        return NotificationView(message: message, image: image)
+        return NotificationView(message: message, title: titleSubject)
     }
 
     override func willActivate() {
@@ -35,17 +37,8 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
 //    }
     override func didReceive(_ notification: UNNotification) {
         let content = notification.request.content
+        titleSubject = content.title
         message = content.body
         
-        let validRange = 1...20
-        
-        if
-            let imageNumber = content.userInfo["imageNumber"] as? Int,
-            validRange ~= imageNumber {
-            image = Image("cat\(imageNumber)")
-        } else {
-            let num = Int.random(in: validRange)
-            image = Image("cat\(num)")
-        }
     }
 }
