@@ -1,21 +1,30 @@
-//
-//  NotificationView.swift
-//  MyNewTestApp Watch App
-//
-//  Created by Mark Frazier on 8/17/22.
-//
-
 import SwiftUI
 
 struct NotificationView: View {
-    
-    var body: some View {
-        Text("Hello, World!")
+  // 1
+  let message: String
+  let image: Image
+
+  // 2
+  var body: some View {
+    ScrollView {
+      Text(message)
+        .font(.headline)
+
+      image
+        .resizable()
+        .scaledToFit()
     }
+  }
 }
 
 struct NotificationView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationView()
-    }
+  static var previews: some View {
+    // 3
+    NotificationView(
+      message: "Awww",
+      image: Image("cat\(Int.random(in: 1...20))")
+    )
+  }
 }
+

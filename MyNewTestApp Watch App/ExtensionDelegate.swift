@@ -41,12 +41,11 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotification
       })
       
     let center = UNUserNotificationCenter.current()
-    center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+      center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
       if granted {
           print("Permission Granted")
           
           WKExtension.shared().registerForRemoteNotifications()
-          print(WKExtension.shared().isRegisteredForRemoteNotifications)
       }
     }
   }
