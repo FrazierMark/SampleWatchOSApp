@@ -14,7 +14,9 @@ import AEPCore
 
 struct AssuranceView: View {
     
-    @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6ad1113f-881c-4b60-8a13-7827659cfefd"
+    @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
+    
+    
     
     
     var body: some View {

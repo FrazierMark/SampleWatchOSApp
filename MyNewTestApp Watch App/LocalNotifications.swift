@@ -2,9 +2,9 @@ import Foundation
 import UserNotifications
 
 final class LocalNotifications: NSObject {
-  static let categoryIdentifier = "Pawsome"
+  static let categoryIdentifier = "Testing Purposes"
 
-  private let actionIdentifier = "viewCatsAction"
+  private let actionIdentifier = "viewTestMessage"
 
   override init() {
     super.init()
@@ -27,7 +27,7 @@ final class LocalNotifications: NSObject {
 
     let action = UNNotificationAction(
       identifier: self.actionIdentifier,
-      title: "None",
+      title: "Mark's Test App",
       options: .foreground)
 
     let category = UNNotificationCategory(
@@ -45,9 +45,8 @@ final class LocalNotifications: NSObject {
     guard settings.alertSetting == .enabled else { return }
 
     let content = UNMutableNotificationContent()
-    content.title = "Pawsome"
-    content.subtitle = "Guess what time it is"
-    content.body = "Pawsome time!"
+    content.title = "Mark's Test App"
+    content.body = "Testing Time!!"
     content.categoryIdentifier = Self.categoryIdentifier
 
     let components = DateComponents(minute: 30)
@@ -66,7 +65,7 @@ final class LocalNotifications: NSObject {
 
 extension LocalNotifications: UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-    return [.list, .sound]
+      return [.alert, .sound, .badge, .list, .banner]
   }
 }
 

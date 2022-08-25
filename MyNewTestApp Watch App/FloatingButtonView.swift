@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-
+import AEPAssurance
 
 struct FloatingButtonView: View {
     
@@ -44,6 +44,7 @@ struct FloatingButtonView: View {
     func showStatus() {
         connectedStatus1.toggle()
         connectedStatus2.toggle()
+        
     }
 }
         

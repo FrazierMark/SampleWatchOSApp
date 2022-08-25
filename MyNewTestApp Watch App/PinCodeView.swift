@@ -22,8 +22,7 @@ struct PinCodeView: View {
 
 
 struct ConnectedSuccess: View {
-    
-    @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6ad1113f-881c-4b60-8a13-7827659cfefd"
+
     @State var unLocked = false
     
     var body: some View{
@@ -65,7 +64,7 @@ struct PincodeScreen: View {
                 .fontWeight(.medium)
                 .padding(.top, 1)
             
-            HStack(spacing: 2){
+            HStack(spacing: 3){
                 // Pincode Circle view
                 
                 ForEach(0..<4, id: \.self){index in
@@ -96,6 +95,7 @@ struct PincodeScreen: View {
     }
     
     
+    
     struct PincodeView: View {
         var index: Int
         @Binding var pincode: String
@@ -104,14 +104,14 @@ struct PincodeScreen: View {
             VStack {
                 Circle()
                     .stroke(Color.white, lineWidth: 1)
-                    .frame(width: 4, height: 4)
+                    .frame(width: 5, height: 5)
                 
                 //checking whether it is typed
                 if pincode.count > index{
                     
                     Circle()
                         .fill(Color.white)
-                        .frame(width: 2, height: 2)
+                        .frame(width: 4, height: 4)
                 }
             }
         }
@@ -131,7 +131,7 @@ struct PincodeScreen: View {
     
     struct PincodeButton: View {
         
-        @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=6ad1113f-881c-4b60-8a13-7827659cfefd"
+        @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
         var value: String
         
         @Binding var pincode: String
@@ -146,20 +146,20 @@ struct PincodeScreen: View {
                     
                     if (value == "delete.fill") {
                         Image(systemName: "delete.left")
-                            .font(.system(size: 10))
+                            .font(.system(size: 12))
                             .foregroundColor(.white)
                         
                     } else if (value == "connect") {
                         Image(systemName: "link.circle")
-                            .font(.system(size: 10))
+                            .font(.system(size: 12))
                             .foregroundColor(.white)
                     } else {
                         Text(value)
-                            .font(.system(size: 10))
+                            .font(.system(size: 12))
                             .foregroundColor(.white)
                     }
                 }
-            }).frame(width: 30, height: 30)
+            }).frame(width: 35, height: 35)
                 .background(Color.red)
                 .cornerRadius(10)
         }

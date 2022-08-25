@@ -55,7 +55,9 @@
 		67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E4128ADB200002B08CF /* SaveForLaters.swift */; };
 		6762B62028B426A800BFF981 /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 6762B61F28B426A800BFF981 /* AEPAssurance */; };
 		6762B64528B5820400BFF981 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6762B64428B5820400BFF981 /* FloatingButtonView.swift */; };
-		6762B64728B5B56300BFF981 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6762B64628B5B56300BFF981 /* LocalNotifications.swift */; };
+		6762B65228B6E60700BFF981 /* RemotePush.apns in Resources */ = {isa = PBXBuildFile; fileRef = 6762B64E28B6E60700BFF981 /* RemotePush.apns */; };
+		6762B65528B6ED1E00BFF981 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6762B65428B6ED1E00BFF981 /* LocalNotifications.swift */; };
+		679FB99A28B6F869002535DB /* MainNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679FB99928B6F869002535DB /* MainNotificationView.swift */; };
 		67F1776D28AF128C0077272A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776B28AF128C0077272A /* UserNotificationsUI.framework */; };
 		67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776C28AF128C0077272A /* UserNotifications.framework */; };
 		67F1777028B015100077272A /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776F28B015100077272A /* WatchKit.framework */; };
@@ -126,7 +128,9 @@
 		67389E6228ADB5C3002B08CF /* aepsdk-core-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-core-ios"; path = "../SDKs/aepsdk-core-ios"; sourceTree = "<group>"; };
 		6762B61E28B4269C00BFF981 /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		6762B64428B5820400BFF981 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
-		6762B64628B5B56300BFF981 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		6762B64E28B6E60700BFF981 /* RemotePush.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RemotePush.apns; sourceTree = "<group>"; };
+		6762B65428B6ED1E00BFF981 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		679FB99928B6F869002535DB /* MainNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNotificationView.swift; sourceTree = "<group>"; };
 		67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyNewTestApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		67F1776B28AF128C0077272A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
 		67F1776C28AF128C0077272A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
@@ -184,15 +188,16 @@
 				67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */,
 				671D926A28AEC3AD0065EF8E /* MyNewTestApp Watch App.entitlements */,
 				67389E2228ADAFBF002B08CF /* xdmlib */,
+				67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */,
+				67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */,
+				6762B65428B6ED1E00BFF981 /* LocalNotifications.swift */,
 				67389E0628ADAECE002B08CF /* NotificationController.swift */,
 				67389E0828ADAEDD002B08CF /* NotificationView.swift */,
-				6762B64628B5B56300BFF981 /* LocalNotifications.swift */,
-				67389DF428ADAE54002B08CF /* MyNewTestAppApp.swift */,
+				679FB99928B6F869002535DB /* MainNotificationView.swift */,
+				6762B64E28B6E60700BFF981 /* RemotePush.apns */,
 				67389E0A28ADAEEF002B08CF /* ConsentView.swift */,
-				67389E0C28ADAEFF002B08CF /* ComplicationController.swift */,
 				67389E0E28ADAF0D002B08CF /* EdgeView.swift */,
 				67389E1028ADAF1E002B08CF /* ButtonStyle.swift */,
-				67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */,
 				67389E1428ADAF48002B08CF /* AdIdUtils.swift */,
 				67389E1628ADAF55002B08CF /* CoreView.swift */,
 				67389E1828ADAF6D002B08CF /* AssuranceView.swift */,
@@ -202,6 +207,7 @@
 				67389DF628ADAE54002B08CF /* MenuView.swift */,
 				67389E2028ADAFB3002B08CF /* MessagingView.swift */,
 				6762B64428B5820400BFF981 /* FloatingButtonView.swift */,
+				67389E0C28ADAEFF002B08CF /* ComplicationController.swift */,
 				67389DF828ADAE55002B08CF /* Assets.xcassets */,
 				67389DFA28ADAE55002B08CF /* Preview Content */,
 			);
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67389DFC28ADAE55002B08CF /* Preview Assets.xcassets in Resources */,
+				6762B65228B6E60700BFF981 /* RemotePush.apns in Resources */,
 				67389DF928ADAE55002B08CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +395,6 @@
 				67389DF728ADAE54002B08CF /* MenuView.swift in Sources */,
 				67389E2828ADB0D2002B08CF /* Commerce.swift in Sources */,
 				67389E3228ADB13D002B08CF /* ProductListAdds.swift in Sources */,
-				6762B64728B5B56300BFF981 /* LocalNotifications.swift in Sources */,
 				67389E1B28ADAF83002B08CF /* OptimizeView.swift in Sources */,
 				67389E3C28ADB1B6002B08CF /* ProductListViews.swift in Sources */,
 				67389E0F28ADAF0D002B08CF /* EdgeView.swift in Sources */,
@@ -396,6 +402,7 @@
 				67389E3828ADB182002B08CF /* ProductListRemovals.swift in Sources */,
 				6762B64528B5820400BFF981 /* FloatingButtonView.swift in Sources */,
 				67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */,
+				679FB99A28B6F869002535DB /* MainNotificationView.swift in Sources */,
 				67389E3028ADB118002B08CF /* PaymentsItem.swift in Sources */,
 				67389E3E28ADB1CA002B08CF /* ProductViews.swift in Sources */,
 				67389E1728ADAF55002B08CF /* CoreView.swift in Sources */,
@@ -403,6 +410,7 @@
 				67389E0928ADAEDD002B08CF /* NotificationView.swift in Sources */,
 				67389E2C28ADB0FD002B08CF /* MobileSDKCommerceSchema.swift in Sources */,
 				67389E1528ADAF48002B08CF /* AdIdUtils.swift in Sources */,
+				6762B65528B6ED1E00BFF981 /* LocalNotifications.swift in Sources */,
 				67389E3A28ADB1A7002B08CF /* ProductListReopens.swift in Sources */,
 				67389E0B28ADAEEF002B08CF /* ConsentView.swift in Sources */,
 				67389E1F28ADAFA1002B08CF /* EdgeIdentityView.swift in Sources */,

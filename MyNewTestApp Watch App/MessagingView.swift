@@ -137,12 +137,17 @@ func scheduleNotification() {
     notificationCenter.add(request, withCompletionHandler: handleNotificationError(_:))
 }
 
+
+
+
 func scheduleNotificationWithCustomAction() {
     let content = UNMutableNotificationContent()
     content.title = "Custom actions notification"
     content.body = "This notification has custom actions. Click and hold on the notification to show the custom action buttons."
     content.categoryIdentifier = "MEETING_INVITATION"
 
+    
+    
     /// the structure of `userInfo` is the same as you'd see with an actual push message.
     /// the values are made up for demonstration purposes.
     content.userInfo = [

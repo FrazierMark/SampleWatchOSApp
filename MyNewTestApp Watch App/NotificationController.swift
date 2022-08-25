@@ -12,11 +12,11 @@ import SwiftUI
 import UserNotifications
 
 class NotificationController: WKUserNotificationHostingController<NotificationView> {
-    var titleSubject: String!
-     var message: String!
+    var title: String = ""
+    var message: String = ""
 
     override var body: NotificationView {
-        return NotificationView(message: message, title: titleSubject)
+        return NotificationView(message: message, title: title)
     }
 
     override func willActivate() {
@@ -29,16 +29,14 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
         super.didDeactivate()
     }
 
-//    override func didReceive(_ notification: UNNotification) {
+
 //        // This method is called when a notification needs to be presented.
 //        // Implement it if you use a dynamic notification interface.
 //        // Populate your dynamic notification interface as quickly as possible.
-//
-//    }
     override func didReceive(_ notification: UNNotification) {
         let content = notification.request.content
-        titleSubject = content.title
+        title = content.title
         message = content.body
-        
+
     }
 }
