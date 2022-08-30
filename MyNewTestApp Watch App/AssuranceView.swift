@@ -16,9 +16,6 @@ struct AssuranceView: View {
     
     @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
     
-    
-    
-    
     var body: some View {
         
         TextField("Copy Assurance Session URL to here", text: $assuranceSessionUrl)
@@ -26,7 +23,7 @@ struct AssuranceView: View {
             .lineLimit(nil)
         
         
-        NavigationLink(destination: PinCodeView()) {
+        NavigationLink(destination: PinCodeView(assuranceSessionUrl: assuranceSessionUrl)) {
             Text("Pincode")
                 
         }.background(Color.red)

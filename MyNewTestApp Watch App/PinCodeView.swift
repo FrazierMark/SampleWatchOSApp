@@ -1,114 +1,105 @@
-//
-//  PinCodeView.swift
-//  MyNewTestApp Watch App
-//
-//  Created by Mark Frazier on 8/17/22.
-//
+/*
+ Copyright 2022 Adobe
+ All Rights Reserved.
+ 
+ NOTICE: Adobe permits you to use, modify, and distribute this file in
+ accordance with the terms of the Adobe license agreement accompanying
+ it.
+ */
 
 import Foundation
 import AEPCore
 import AEPAssurance
 import SwiftUI
 
+
 struct PinCodeView: View {
+    
+    @State public var assuranceSessionUrl: String
+    
     var body: some View {
-        NavigationView{
-            ConnectedSuccess()
+        NavigationView {
+            MainView(assuranceSessionUrl: assuranceSessionUrl)
         }
     }
 }
 
 
+struct MainView: View {
 
-
-struct ConnectedSuccess: View {
-
+    @State var assuranceSessionUrl: String
     @State var unLocked = false
     
-    var body: some View{
+
+    var body: some View {
         VStack {
             if unLocked {
                 Text("Assurance Connected")
                     .font(.title3)
                     .fontWeight(.medium)
             } else {
-                PincodeScreen(unLocked: $unLocked)
+                PincodeScreen(assuranceSessionUrl: $assuranceSessionUrl, unLocked: $unLocked)
             }
         }
-        .preferredColorScheme(unLocked ? .light : .dark)
     }
-//    func callAssurance() {
-//       if let url = URL(string: self.assuranceSessionUrl) {
-//           Assurance.startSession(url: url)
-//        }
-//    }
 }
 
 
-
 struct PincodeScreen: View {
-    
+
     @State var pincode = ""
-    @AppStorage("lock_Pincode") var key = "1234"
+    // Hard Coded Pin from Assurance session
+    @AppStorage("assurance_pin") var key = "3860"
+    @Binding var assuranceSessionUrl: String
     @Binding var unLocked: Bool
     @State var wrongPincode = false
     let height = WKInterfaceDevice.current().screenBounds.width
-    
-    
+
     var body: some View {
-        
-        
-        VStack{
+        VStack {
             Text("Enter Pin to Connect to Assurance")
-                .font(.system(size: 10))
+                .font(.system(size: 9))
                 .fontWeight(.medium)
-                .padding(.top, 1)
-            
-            HStack(spacing: 3){
-                // Pincode Circle view
-                
-                ForEach(0..<4, id: \.self){index in
+
+            HStack(spacing: 3) {
+                ForEach(0..<4, id: \.self) { index in
                     PincodeView(index: index, pincode: $pincode)
                 }
-                
             }
-            
+
             Text(wrongPincode ? "Incorrect Pin" : "")
                 .font(.system(size: 8))
                 .foregroundColor(.red)
                 .fontWeight(.medium)
-            
-            
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 24, maximum: 29)), count: 3)
-                      ,spacing: 3){
-                
-                ForEach(1...9, id: \.self){value in
-                    PincodeButton(value: "\(value)", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
+
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 24, maximum: 45), spacing: 3), count: 3)
+                , spacing: 4) {
+
+                ForEach(1...9, id: \.self) { value in
+                    PincodeButton(value: "\(value)", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode, assuranceSessionUrl: $assuranceSessionUrl)
                 }
-                PincodeButton(value: "delete.fill", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
-                PincodeButton(value: "0", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
-                PincodeButton(value: "connect", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode)
+                PincodeButton(value: "delete.fill", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode, assuranceSessionUrl: $assuranceSessionUrl)
+                PincodeButton(value: "0", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode, assuranceSessionUrl: $assuranceSessionUrl)
+                PincodeButton(value: "connect", pincode: $pincode, key: $key, unlocked: $unLocked, wrongPass: $wrongPincode, assuranceSessionUrl: $assuranceSessionUrl)
             }
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
+            .navigationTitle("")
+            .navigationBarHidden(true)
     }
-    
-    
+
     
     struct PincodeView: View {
         var index: Int
-        @Binding var pincode: String
         
+        @Binding var pincode: String
+
         var body: some View {
             VStack {
                 Circle()
                     .stroke(Color.white, lineWidth: 1)
                     .frame(width: 5, height: 5)
-                
-                //checking whether it is typed
-                if pincode.count > index{
-                    
+
+                if pincode.count > index {
                     Circle()
                         .fill(Color.white)
                         .frame(width: 4, height: 4)
@@ -116,39 +107,29 @@ struct PincodeScreen: View {
             }
         }
     }
-    
-    //    struct DisconnectButton: View {
-    //        var value: String
-    //
-    //        var body: some View {
-    //            Button(action: disconnectAssurance(), label: {
-    //                Text(value)
-    //                    .font(.system(size: 10))
-    //                    .foregroundColor(.white)
-    //            })
-    //        }
-    //    }
-    
+
+
     struct PincodeButton: View {
-        
-        @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
+
+        // Hard coding deeplink and sessionId so it doesn't have to be typed in.
+//        @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
+
         var value: String
         
         @Binding var pincode: String
         @Binding var key: String
         @Binding var unlocked: Bool
         @Binding var wrongPass: Bool
-        
-        var body: some View{
+        @Binding var assuranceSessionUrl: String
+
+        var body: some View {
             Button(action: setPincode, label: {
-                
-                VStack{
-                    
+                VStack {
                     if (value == "delete.fill") {
                         Image(systemName: "delete.left")
                             .font(.system(size: 12))
                             .foregroundColor(.white)
-                        
+
                     } else if (value == "connect") {
                         Image(systemName: "link.circle")
                             .font(.system(size: 12))
@@ -159,15 +140,14 @@ struct PincodeScreen: View {
                             .foregroundColor(.white)
                     }
                 }
-            }).frame(width: 35, height: 35)
+            }).frame(width: 30, height: 30)
                 .background(Color.red)
                 .cornerRadius(10)
         }
-        
-        func setPincode(){
-            
+
+        func setPincode() {
             // Check if backspace is pressed
-            withAnimation{
+            withAnimation {
                 if (value == "delete.fill") {
                     if pincode.count != 0 {
                         pincode.removeLast()
@@ -178,36 +158,30 @@ struct PincodeScreen: View {
                     if pincode.count != 4 {
                         pincode.append(value)
 
-                        // Delay Animation....
-                        
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-//                            withAnimation{
-//                                if pincode.count == 4 {
-//                                    if pincode == key {
-//                                        unlocked = true
-//                                    } else {
-//                                        wrongPass = true
-//                                        pincode.removeAll()
-//                                    }
-//                                }
-//                            }
-//                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation {
+                                if pincode.count == 4 {
+                                    if pincode == key {
+                                        self.callAssurance(pin: pincode)
+                                        unlocked = true
+                                    } else {
+                                        wrongPass = true
+                                        pincode.removeAll()
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
             }
-            
+
         }
+
         func callAssurance(pin: String) {
             if let url = URL(string: self.assuranceSessionUrl) {
                 Assurance.startSession(url: url, pin: pin)
             }
         }
-
-    }
-}
-
-struct PinCodeView_Previews: PreviewProvider {
-    static var previews: some View {
-        PinCodeView()
     }
 }
