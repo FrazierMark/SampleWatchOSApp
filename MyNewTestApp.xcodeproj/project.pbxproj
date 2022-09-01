@@ -26,7 +26,6 @@
 		67389E0728ADAECE002B08CF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0628ADAECE002B08CF /* NotificationController.swift */; };
 		67389E0928ADAEDD002B08CF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0828ADAEDD002B08CF /* NotificationView.swift */; };
 		67389E0B28ADAEEF002B08CF /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0A28ADAEEF002B08CF /* ConsentView.swift */; };
-		67389E0D28ADAEFF002B08CF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0C28ADAEFF002B08CF /* ComplicationController.swift */; };
 		67389E0F28ADAF0D002B08CF /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E0E28ADAF0D002B08CF /* EdgeView.swift */; };
 		67389E1128ADAF1E002B08CF /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1028ADAF1E002B08CF /* ButtonStyle.swift */; };
 		67389E1328ADAF2E002B08CF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */; };
@@ -95,7 +94,6 @@
 		67389E0628ADAECE002B08CF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		67389E0828ADAEDD002B08CF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		67389E0A28ADAEEF002B08CF /* ConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentView.swift; sourceTree = "<group>"; };
-		67389E0C28ADAEFF002B08CF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		67389E0E28ADAF0D002B08CF /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
 		67389E1028ADAF1E002B08CF /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		67389E1228ADAF2E002B08CF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				67389DF628ADAE54002B08CF /* MenuView.swift */,
 				67389E2028ADAFB3002B08CF /* MessagingView.swift */,
 				6762B64428B5820400BFF981 /* FloatingButtonView.swift */,
-				67389E0C28ADAEFF002B08CF /* ComplicationController.swift */,
 				67389DF828ADAE55002B08CF /* Assets.xcassets */,
 				67389DFA28ADAE55002B08CF /* Preview Content */,
 			);
@@ -404,7 +401,6 @@
 				67389E1F28ADAFA1002B08CF /* EdgeIdentityView.swift in Sources */,
 				67389E3628ADB163002B08CF /* ProductListOpens.swift in Sources */,
 				67389E3428ADB153002B08CF /* ProductListItemsItem.swift in Sources */,
-				67389E0D28ADAEFF002B08CF /* ComplicationController.swift in Sources */,
 				67389E4028ADB1E0002B08CF /* Purchases.swift in Sources */,
 				67389E1D28ADAF91002B08CF /* PinCodeView.swift in Sources */,
 				67389E2A28ADB0E7002B08CF /* InStorePurchase.swift in Sources */,

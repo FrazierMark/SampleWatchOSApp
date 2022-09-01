@@ -1,11 +1,4 @@
-////
-////  ExtensionDelegate.swift
-////  MyNewTestApp Watch App
-////
-////  Created by Mark Frazier on 8/17/22.
-////
-//
-//
+
 import Foundation
 import WatchKit
 import UserNotifications
@@ -24,8 +17,6 @@ import AEPAssurance
 //// import AEPOptimize
 
 
-import WatchKit
-import UserNotifications
 import UIKit
 import CoreData
 
@@ -121,6 +112,7 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         MobileCore.setPushIdentifier(deviceToken)
     }
 
+    // Receive Background Notifications
     func didReceiveRemoteNotification(_ userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (WKBackgroundFetchResult) -> Void) {
         print("Remote recieved")
 
@@ -138,13 +130,10 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         print("Will present notification...")
         let userInfo = notification.request.content.userInfo
         if let apsPayload = userInfo as? [String: Any] {
-            NotificationCenter.default.post(name: Notification.Name("TEST"), object: self, userInfo: apsPayload)
+            // NotificationCenter.default.post(name: Notification.Name("TEST"), object: self, userInfo: apsPayload)
             print(apsPayload)
         }
-
-        // let categoryIdentifier = notification.request.content.categoryIdentifier
-        center.add(notification.request, withCompletionHandler: nil)
-        completionHandler([.banner, .badge, .sound])
+        completionHandler([.badge, .sound])
     }
 
     // Handling the Selection of Custom Actions
