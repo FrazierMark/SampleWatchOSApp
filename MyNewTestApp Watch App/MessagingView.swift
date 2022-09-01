@@ -85,13 +85,6 @@ struct MessagingView: View {
     }
 }
 
-// Calling this directly above....
-//    func updateEcid() {
-//        Identity.getExperienceCloudId { (ecid, err) in
-//            if ecid == nil {return}
-//            ecidState = ecid ?? ""
-//        }
-//    }
 
 // MARK: - Creation of local notifications for demonstrating notification click-throughs
 
@@ -119,13 +112,6 @@ func scheduleNotification() {
                 ]
             ]
         ]
-    var dateComponents = DateComponents()
-    dateComponents.calendar = Calendar.current
-
-    dateComponents.weekday = 5 // Thurday
-    dateComponents.hour = 21 // 21:00 hours
-//    let trigger = UNCalendarNotificationTrigger(
-//        dateMatching: dateComponents, repeats: true)
 
 
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)

@@ -11,9 +11,7 @@ import SwiftUI
 
 @main
 struct MyNewTestApp_Watch_AppApp: App {
-@WKExtensionDelegateAdaptor private var extensionDelegate: ExtensionDelegate
-
-     // private let local = LocalNotifications()
+    @WKExtensionDelegateAdaptor(ExtensionDelegate.self) var extensionDelegate
     
     @SceneBuilder var body: some Scene {
         WindowGroup {

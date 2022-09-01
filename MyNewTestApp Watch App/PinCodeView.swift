@@ -111,9 +111,6 @@ struct PincodeScreen: View {
 
     struct PincodeButton: View {
 
-        // Hard coding deeplink and sessionId so it doesn't have to be typed in.
-//        @State private var assuranceSessionUrl: String = "sampleappmarkdeeplink://default?adb_validation_sessionid=b13d7462-7cdb-41b2-a3dd-5ca8ae05cccf"
-
         var value: String
         
         @Binding var pincode: String
