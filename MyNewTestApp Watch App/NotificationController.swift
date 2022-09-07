@@ -26,8 +26,7 @@ final class NotificationController: WKUserNotificationInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-    
+    } 
 
     override func didReceive(_ notification: UNNotification) {
         // This method is called when a notification needs to be presented.

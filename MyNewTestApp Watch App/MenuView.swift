@@ -1,21 +1,17 @@
-//
-//  ContentView.swift
-//  MyNewTestApp Watch App
-//
-//  Created by Mark Frazier on 8/17/22.
-//
+/*
+ Copyright 2022 Adobe
+ All Rights Reserved.
+ 
+ NOTICE: Adobe permits you to use, modify, and distribute this file in
+ accordance with the terms of the Adobe license agreement accompanying
+ it.
+ */
 
 
 import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-//        ZStack(alignment: .bottomTrailing) {
-//            Rectangle()
-//                .foregroundColor(.clear)
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
-            
             NavigationView {
                 List {
                     Section(header: Text("Core")) {
@@ -57,7 +53,7 @@ struct MenuView: View {
                     }.listRowBackground(Color.red)
                 }.navigationBarTitle(Text("Extensions"))
                 
-            }.overlay(FloatingButtonView())
+            }// .overlay(FloatingButtonView())
         }
 }
 

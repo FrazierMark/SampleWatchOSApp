@@ -10,10 +10,6 @@ import SwiftUI
 import WatchKit
 
 
-// Issues with WebView cause of unable to use UIViewRepresentable in WebKit
-// Need another way to display HTML??
-
-
 struct OptimizeView: View {
     @State private var viewDidLoad = false
 

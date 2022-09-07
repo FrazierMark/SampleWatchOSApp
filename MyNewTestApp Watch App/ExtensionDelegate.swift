@@ -1,3 +1,11 @@
+/*
+ Copyright 2022 Adobe
+ All Rights Reserved.
+ 
+ NOTICE: Adobe permits you to use, modify, and distribute this file in
+ accordance with the terms of the Adobe license agreement accompanying
+ it.
+ */
 
 import Foundation
 import WatchKit
@@ -112,7 +120,7 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         MobileCore.setPushIdentifier(deviceToken)
     }
 
-    // Receive Background Notifications
+    //Receive Notifications while app is in background
     func didReceiveRemoteNotification(_ userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (WKBackgroundFetchResult) -> Void) {
         print("Remote recieved")
 
@@ -130,10 +138,10 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         print("Will present notification...")
         let userInfo = notification.request.content.userInfo
         if let apsPayload = userInfo as? [String: Any] {
-            // NotificationCenter.default.post(name: Notification.Name("TEST"), object: self, userInfo: apsPayload)
+            NotificationCenter.default.post(name: Notification.Name("T"), object: self, userInfo: apsPayload)
             print(apsPayload)
         }
-        completionHandler([.badge, .sound])
+        completionHandler([.banner, .badge, .sound])
     }
 
     // Handling the Selection of Custom Actions
