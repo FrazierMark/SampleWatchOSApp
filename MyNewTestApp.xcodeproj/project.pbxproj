@@ -52,7 +52,6 @@
 		67389E4228ADB200002B08CF /* SaveForLaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67389E4128ADB200002B08CF /* SaveForLaters.swift */; };
 		6762B62028B426A800BFF981 /* AEPAssurance in Frameworks */ = {isa = PBXBuildFile; productRef = 6762B61F28B426A800BFF981 /* AEPAssurance */; };
 		6762B64528B5820400BFF981 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6762B64428B5820400BFF981 /* FloatingButtonView.swift */; };
-		6762B65228B6E60700BFF981 /* RemotePush.apns in Resources */ = {isa = PBXBuildFile; fileRef = 6762B64E28B6E60700BFF981 /* RemotePush.apns */; };
 		67F1776D28AF128C0077272A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776B28AF128C0077272A /* UserNotificationsUI.framework */; };
 		67F1776E28AF128C0077272A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776C28AF128C0077272A /* UserNotifications.framework */; };
 		67F1777028B015100077272A /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F1776F28B015100077272A /* WatchKit.framework */; };
@@ -120,7 +119,6 @@
 		67389E6228ADB5C3002B08CF /* aepsdk-core-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-core-ios"; path = "../SDKs/aepsdk-core-ios"; sourceTree = "<group>"; };
 		6762B61E28B4269C00BFF981 /* aepsdk-assurance-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "aepsdk-assurance-ios"; path = "../SDKs/aepsdk-assurance-ios"; sourceTree = "<group>"; };
 		6762B64428B5820400BFF981 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
-		6762B64E28B6E60700BFF981 /* RemotePush.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RemotePush.apns; sourceTree = "<group>"; };
 		67F1776A28AF12650077272A /* MyNewTestApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyNewTestApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		67F1776B28AF128C0077272A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = DEVELOPER_DIR; };
 		67F1776C28AF128C0077272A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
@@ -192,7 +190,6 @@
 				67389E1A28ADAF83002B08CF /* OptimizeView.swift */,
 				67389E1C28ADAF91002B08CF /* PinCodeView.swift */,
 				6762B64428B5820400BFF981 /* FloatingButtonView.swift */,
-				6762B64E28B6E60700BFF981 /* RemotePush.apns */,
 				67389DF828ADAE55002B08CF /* Assets.xcassets */,
 				67389DFA28ADAE55002B08CF /* Preview Content */,
 			);
@@ -358,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67389DFC28ADAE55002B08CF /* Preview Assets.xcassets in Resources */,
-				6762B65228B6E60700BFF981 /* RemotePush.apns in Resources */,
 				67389DF928ADAE55002B08CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

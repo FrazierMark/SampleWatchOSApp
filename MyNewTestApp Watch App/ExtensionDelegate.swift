@@ -98,10 +98,8 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
     func setupRemoteNotifications() {
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-
             if granted {
                 print("Permission Granted")
-
                 DispatchQueue.main.async {
                     WKExtension.shared().registerForRemoteNotifications()
                 }
@@ -120,22 +118,11 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         MobileCore.setPushIdentifier(deviceToken)
     }
 
-    //Receive Notifications while app is in background
-    func didReceiveRemoteNotification(_ userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (WKBackgroundFetchResult) -> Void) {
-        print("Remote recieved")
-
-        if let apsPayload = userInfo as? [String: Any] {
-            NotificationCenter.default.post(name: Notification.Name("TEST NAME"), object: self, userInfo: apsPayload)
-        }
-        completionHandler(WKBackgroundFetchResult.newData)
-    }
-
     // MARK: - Handle Push Notification Interactions
     // Receiving Notifications
     // Delegate method to handle a notification that arrived while the app was running in the foreground.
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
-        print("Will present notification...")
         let userInfo = notification.request.content.userInfo
         if let apsPayload = userInfo as? [String: Any] {
             NotificationCenter.default.post(name: Notification.Name("T"), object: self, userInfo: apsPayload)
@@ -143,6 +130,15 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         }
         completionHandler([.banner, .badge, .sound])
     }
+    
+    //Receive Notifications while app is in background
+    func didReceiveRemoteNotification(_ userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (WKBackgroundFetchResult) -> Void) {
+        if let apsPayload = userInfo as? [String: Any] {
+            NotificationCenter.default.post(name: Notification.Name("TEST NAME"), object: self, userInfo: apsPayload)
+        }
+        completionHandler(WKBackgroundFetchResult.newData)
+    }
+
 
     // Handling the Selection of Custom Actions
     // Delegate method to process the user's response to a delivered notification.
@@ -161,7 +157,6 @@ extension ExtensionDelegate: UNUserNotificationCenterDelegate {
         default:
             Messaging.handleNotificationResponse(response, applicationOpened: true, customActionId: nil)
         }
-        // Always call the completion handler when done.
         completionHandler()
     }
 }

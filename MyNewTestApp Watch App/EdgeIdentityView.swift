@@ -25,20 +25,6 @@ struct EdgeIdentityView: View {
     // This either does not work with watchOS OR is just doesn't work with a simulator
     /// Updates view for ad ID related elements
     func setDeviceAdvertisingIdentifier() {
-//         let isTrackingAuthorized = AdIdUtils.isTrackingAuthorized()
-//        print("isTrackingAuthorized: \(isTrackingAuthorized)")
-//         trackingAuthorizationResultText = isTrackingAuthorized ? "Tracking allowed" : "Tracking not allowed"
-//
-//        if isTrackingAuthorized {
-//            self.adID = AdIdUtils.getAdvertisingIdentifierForEnvironment()
-//            print("Advertising identifier fetched: \(String(describing: adID))")
-//            MobileCore.setAdvertisingIdentifier(self.adID?.uuidString)
-//        }
-//        else {
-//        print("Ad tracking not authorized; setting ad ID to the empty string")
-//        MobileCore.setAdvertisingIdentifier("")
-//         }
-        
         print(WKInterfaceDevice.current().identifierForVendor?.uuidString ?? "")
         MobileCore.setAdvertisingIdentifier(WKInterfaceDevice.current().identifierForVendor?.uuidString ?? "")
     }
@@ -58,13 +44,6 @@ struct EdgeIdentityView: View {
                 Text(currentEcid)
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
-//                    .contextMenu {
-//                        Button(action: {
-//                            // UIPasteboard.general.string = currentEcid
-//                        }) {
-//                            Text("Copy")
-//                            }
-//                    }
 
                 Text("Current Identities:")
                 Button(action: {
